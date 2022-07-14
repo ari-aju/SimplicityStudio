@@ -1,0 +1,37 @@
+# Silicon Labs Project Configuration Tools: slcp, v0, Component selection file.
+project_name: timer
+label: timer
+description: |
+  This example project shows an empty configuration that can be used as a starting point to add components and functionality.
+category: Example|Platform
+filter:
+- name: Device Type
+  value: [SoC]
+- name: MCU
+  value: [32-bit MCU]
+- name: Project Difficulty
+  value: [Beginner]
+package: platform
+quality: production
+source:
+- {path: app.c}
+- {path: main.c}
+include:
+- path: ''
+  file_list:
+  - {path: app.h}
+sdk: {id: gecko_sdk, version: 4.1.0}
+toolchain_settings: []
+component:
+- {id: device_init_lfxo}
+- {id: EFR32MG12P433F1024GM48}
+- {id: device_init_hfxo}
+- {id: emlib_letimer}
+- {id: sl_system}
+- {id: device_init}
+- {id: emlib_timer}
+- {id: udelay}
+define:
+- {name: DEBUG_EFM}
+ui_hints: {}
+
