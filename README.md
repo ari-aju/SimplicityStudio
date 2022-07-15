@@ -1,2 +1,2 @@
-# v5_workspace
-Repositório para os meus códigos teste no Simplicity Studio
+# SimplicityStudio
+Repositório para os meus códigos testes no Simplicity Studio
