@@ -61,8 +61,8 @@ gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o: \
  c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_core.h \
  c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_common.h \
  c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_assert.h \
- C:\Users\firmware-1\SimplicityStudio\v5_workspace\usart\autogen/sl_component_catalog.h \
- C:\Users\firmware-1\SimplicityStudio\v5_workspace\usart\config/emlib_core_debug_config.h \
+ C:\Users\firmware-1\SimplicityStudio\v5_workspace\usart_int\autogen/sl_component_catalog.h \
+ C:\Users\firmware-1\SimplicityStudio\v5_workspace\usart_int\config/emlib_core_debug_config.h \
  c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_enum.h
 c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\common\toolchain\inc\sl_gcc_preinclude.h:
 c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_gpio.h:
@@ -125,6 +125,6 @@ c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_bus.h:
 c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_core.h:
 c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_common.h:
 c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_assert.h:
-C:\Users\firmware-1\SimplicityStudio\v5_workspace\usart\autogen/sl_component_catalog.h:
-C:\Users\firmware-1\SimplicityStudio\v5_workspace\usart\config/emlib_core_debug_config.h:
+C:\Users\firmware-1\SimplicityStudio\v5_workspace\usart_int\autogen/sl_component_catalog.h:
+C:\Users\firmware-1\SimplicityStudio\v5_workspace\usart_int\config/emlib_core_debug_config.h:
 c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_enum.h:

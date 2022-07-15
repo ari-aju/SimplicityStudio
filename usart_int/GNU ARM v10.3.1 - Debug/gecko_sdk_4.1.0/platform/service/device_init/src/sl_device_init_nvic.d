@@ -59,8 +59,8 @@ gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_nvic.o: \
  c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_core.h \
  c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_common.h \
  c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_assert.h \
- C:\Users\firmware-1\SimplicityStudio\v5_workspace\usart\autogen/sl_component_catalog.h \
- C:\Users\firmware-1\SimplicityStudio\v5_workspace\usart\config/emlib_core_debug_config.h
+ C:\Users\firmware-1\SimplicityStudio\v5_workspace\usart_int\autogen/sl_component_catalog.h \
+ C:\Users\firmware-1\SimplicityStudio\v5_workspace\usart_int\config/emlib_core_debug_config.h
 c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\common\toolchain\inc\sl_gcc_preinclude.h:
 c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_status.h:
 c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\device\siliconlabs\efr32mg12p\include\em_device.h:
@@ -120,5 +120,5 @@ c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\device\siliconlabs\
 c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_core.h:
 c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_common.h:
 c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_assert.h:
-C:\Users\firmware-1\SimplicityStudio\v5_workspace\usart\autogen/sl_component_catalog.h:
-C:\Users\firmware-1\SimplicityStudio\v5_workspace\usart\config/emlib_core_debug_config.h:
+C:\Users\firmware-1\SimplicityStudio\v5_workspace\usart_int\autogen/sl_component_catalog.h:
+C:\Users\firmware-1\SimplicityStudio\v5_workspace\usart_int\config/emlib_core_debug_config.h:

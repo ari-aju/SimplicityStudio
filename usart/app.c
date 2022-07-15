@@ -9,7 +9,7 @@
 char buffer[BUFFER_SIZE];
 
 USART_InitAsync_TypeDef init = USART_INITASYNC_DEFAULT;
-char welcome_string[] = "Olá! Arielli aqui <3\r\f";
+char welcome_string[] = "Hello World!\r\f";
 int i,j;
 
 void app_init(void)

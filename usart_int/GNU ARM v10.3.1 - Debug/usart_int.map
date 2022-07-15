@@ -89,6 +89,7 @@ Discarded input sections
  .group         0x00000000        0xc ./app.o
  .group         0x00000000        0xc ./app.o
  .group         0x00000000        0xc ./app.o
+ .group         0x00000000        0xc ./app.o
  .text          0x00000000        0x0 ./app.o
  .data          0x00000000        0x0 ./app.o
  .bss           0x00000000        0x0 ./app.o
@@ -2016,8 +2017,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x16 ./gecko_sdk_4.1.0/platform/emlib/src/em_msc.o
  .debug_macro   0x00000000       0xe4 ./gecko_sdk_4.1.0/platform/emlib/src/em_msc.o
  .debug_macro   0x00000000      0x35a ./gecko_sdk_4.1.0/platform/emlib/src/em_msc.o
- .debug_line    0x00000000     0x1127 ./gecko_sdk_4.1.0/platform/emlib/src/em_msc.o
- .debug_str     0x00000000   0x152cc5 ./gecko_sdk_4.1.0/platform/emlib/src/em_msc.o
+ .debug_line    0x00000000     0x112f ./gecko_sdk_4.1.0/platform/emlib/src/em_msc.o
+ .debug_str     0x00000000   0x152cc9 ./gecko_sdk_4.1.0/platform/emlib/src/em_msc.o
  .comment       0x00000000       0x4a ./gecko_sdk_4.1.0/platform/emlib/src/em_msc.o
  .debug_frame   0x00000000      0x114 ./gecko_sdk_4.1.0/platform/emlib/src/em_msc.o
  .ARM.attributes
@@ -2147,7 +2148,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 ./gecko_sdk_4.1.0/platform/emlib/src/em_system.o
  .debug_macro   0x00000000      0x16d ./gecko_sdk_4.1.0/platform/emlib/src/em_system.o
  .debug_line    0x00000000      0xa1c ./gecko_sdk_4.1.0/platform/emlib/src/em_system.o
- .debug_str     0x00000000   0x150827 ./gecko_sdk_4.1.0/platform/emlib/src/em_system.o
+ .debug_str     0x00000000   0x15082b ./gecko_sdk_4.1.0/platform/emlib/src/em_system.o
  .comment       0x00000000       0x4a ./gecko_sdk_4.1.0/platform/emlib/src/em_system.o
  .debug_frame   0x00000000       0x50 ./gecko_sdk_4.1.0/platform/emlib/src/em_system.o
  .ARM.attributes
@@ -3144,7 +3145,7 @@ END GROUP
 LOAD c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtend.o
 LOAD c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtn.o
 
-.text           0x00000000     0x2544
+.text           0x00000000     0x2624
                 0x00000000                linker_vectors_begin = .
  *(.vectors)
  .vectors       0x00000000      0x10c ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/startup_efr32mg12p.o
@@ -3159,354 +3160,358 @@ LOAD c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.1
                 0x0000014c                _stack_init
                 0x00000154                _start
                 0x00000154                _mainCRTStartup
+ .text.TIMER0_IRQHandler
+                0x000001c8       0x54 ./app.o
+                0x000001c8                TIMER0_IRQHandler
+ .text.initLetimer
+                0x0000021c       0x98 ./app.o
+                0x0000021c                initLetimer
  .text.app_init
-                0x000001c8       0xcc ./app.o
-                0x000001c8                app_init
+                0x000002b4       0x54 ./app.o
+                0x000002b4                app_init
  .text.app_process_action
-                0x00000294        0x2 ./app.o
-                0x00000294                app_process_action
+                0x00000308       0x74 ./app.o
+                0x00000308                app_process_action
  .text.startup.main
-                0x00000296       0x14 ./main.o
-                0x00000296                main
+                0x0000037c       0x14 ./main.o
+                0x0000037c                main
  .text.sl_board_default_init
-                0x000002aa        0x4 ./autogen/sl_board_default_init.o
-                0x000002aa                sl_board_default_init
- *fill*         0x000002ae        0x2 
+                0x00000390        0x4 ./autogen/sl_board_default_init.o
+                0x00000390                sl_board_default_init
  .text.sl_device_init_clocks
-                0x000002b0       0x40 ./autogen/sl_device_init_clocks.o
-                0x000002b0                sl_device_init_clocks
+                0x00000394       0x40 ./autogen/sl_device_init_clocks.o
+                0x00000394                sl_device_init_clocks
  .text.sl_platform_init
-                0x000002f0       0x9c ./autogen/sl_event_handler.o
-                0x000002f0                sl_platform_init
+                0x000003d4       0x9c ./autogen/sl_event_handler.o
+                0x000003d4                sl_platform_init
  .text.sl_driver_init
-                0x0000038c        0xe ./autogen/sl_event_handler.o
-                0x0000038c                sl_driver_init
+                0x00000470        0xe ./autogen/sl_event_handler.o
+                0x00000470                sl_driver_init
  .text.sl_service_init
-                0x0000039a        0x4 ./autogen/sl_event_handler.o
-                0x0000039a                sl_service_init
+                0x0000047e        0x4 ./autogen/sl_event_handler.o
+                0x0000047e                sl_service_init
  .text.sl_stack_init
-                0x0000039e        0x2 ./autogen/sl_event_handler.o
-                0x0000039e                sl_stack_init
+                0x00000482        0x2 ./autogen/sl_event_handler.o
+                0x00000482                sl_stack_init
  .text.sl_internal_app_init
-                0x000003a0        0x2 ./autogen/sl_event_handler.o
-                0x000003a0                sl_internal_app_init
+                0x00000484        0x2 ./autogen/sl_event_handler.o
+                0x00000484                sl_internal_app_init
  .text.sl_platform_process_action
-                0x000003a2        0x2 ./autogen/sl_event_handler.o
-                0x000003a2                sl_platform_process_action
+                0x00000486        0x2 ./autogen/sl_event_handler.o
+                0x00000486                sl_platform_process_action
  .text.sl_service_process_action
-                0x000003a4        0x2 ./autogen/sl_event_handler.o
-                0x000003a4                sl_service_process_action
+                0x00000488        0x2 ./autogen/sl_event_handler.o
+                0x00000488                sl_service_process_action
  .text.sl_stack_process_action
-                0x000003a6        0x2 ./autogen/sl_event_handler.o
-                0x000003a6                sl_stack_process_action
+                0x0000048a        0x2 ./autogen/sl_event_handler.o
+                0x0000048a                sl_stack_process_action
  .text.sl_internal_app_process_action
-                0x000003a8        0x2 ./autogen/sl_event_handler.o
-                0x000003a8                sl_internal_app_process_action
+                0x0000048c        0x2 ./autogen/sl_event_handler.o
+                0x0000048c                sl_internal_app_process_action
  .text.sl_board_configure_vcom
-                0x000003aa        0x4 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_control_gpio.o
-                0x000003aa                sl_board_configure_vcom
+                0x0000048e        0x4 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_control_gpio.o
+                0x0000048e                sl_board_configure_vcom
  .text.sl_board_disable_vcom
-                0x000003ae       0x12 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_control_gpio.o
-                0x000003ae                sl_board_disable_vcom
+                0x00000492       0x12 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_control_gpio.o
+                0x00000492                sl_board_disable_vcom
  .text.sl_board_init
-                0x000003c0       0x1c ./gecko_sdk_4.1.0/hardware/board/src/sl_board_init.o
-                0x000003c0                sl_board_init
+                0x000004a4       0x1c ./gecko_sdk_4.1.0/hardware/board/src/sl_board_init.o
+                0x000004a4                sl_board_init
  .text.sl_board_preinit
-                0x000003dc        0xc ./gecko_sdk_4.1.0/hardware/board/src/sl_board_init.o
-                0x000003dc                sl_board_preinit
+                0x000004c0        0xc ./gecko_sdk_4.1.0/hardware/board/src/sl_board_init.o
+                0x000004c0                sl_board_preinit
  .text.sl_cos_send_config
-                0x000003e8        0x6 ./gecko_sdk_4.1.0/hardware/driver/configuration_over_swo/src/sl_cos.o
-                0x000003e8                sl_cos_send_config
- *fill*         0x000003ee        0x2 
- .text.cs_high  0x000003f0        0xc ./gecko_sdk_4.1.0/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
- .text.cs_low   0x000003fc        0xc ./gecko_sdk_4.1.0/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
+                0x000004cc        0x6 ./gecko_sdk_4.1.0/hardware/driver/configuration_over_swo/src/sl_cos.o
+                0x000004cc                sl_cos_send_config
+ *fill*         0x000004d2        0x2 
+ .text.cs_high  0x000004d4        0xc ./gecko_sdk_4.1.0/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
+ .text.cs_low   0x000004e0        0xc ./gecko_sdk_4.1.0/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
  .text.sl_mx25_flash_shutdown
-                0x00000408       0xfc ./gecko_sdk_4.1.0/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
-                0x00000408                sl_mx25_flash_shutdown
+                0x000004ec       0xfc ./gecko_sdk_4.1.0/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
+                0x000004ec                sl_mx25_flash_shutdown
  .text.Default_Handler
-                0x00000504        0x2 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/startup_efr32mg12p.o
-                0x00000504                DebugMon_Handler
-                0x00000504                USART0_TX_IRQHandler
-                0x00000504                I2C0_IRQHandler
-                0x00000504                HardFault_Handler
-                0x00000504                SysTick_Handler
-                0x00000504                USART1_RX_IRQHandler
-                0x00000504                PendSV_Handler
-                0x00000504                NMI_Handler
-                0x00000504                SYNTH_IRQHandler
-                0x00000504                I2C1_IRQHandler
-                0x00000504                WTIMER0_IRQHandler
-                0x00000504                CRYPTO0_IRQHandler
-                0x00000504                WDOG0_IRQHandler
-                0x00000504                USART1_TX_IRQHandler
-                0x00000504                SMU_IRQHandler
-                0x00000504                MSC_IRQHandler
-                0x00000504                ADC0_IRQHandler
-                0x00000504                UsageFault_Handler
-                0x00000504                WDOG1_IRQHandler
-                0x00000504                LEUART0_IRQHandler
-                0x00000504                FPUEH_IRQHandler
-                0x00000504                WTIMER1_IRQHandler
-                0x00000504                GPIO_EVEN_IRQHandler
-                0x00000504                VDAC0_IRQHandler
-                0x00000504                LDMA_IRQHandler
-                0x00000504                CSEN_IRQHandler
-                0x00000504                CRYPTO1_IRQHandler
-                0x00000504                TIMER0_IRQHandler
-                0x00000504                PCNT2_IRQHandler
-                0x00000504                LETIMER0_IRQHandler
-                0x00000504                TIMER1_IRQHandler
-                0x00000504                TRNG0_IRQHandler
-                0x00000504                RFSENSE_IRQHandler
-                0x00000504                BUFC_IRQHandler
-                0x00000504                MODEM_IRQHandler
-                0x00000504                USART2_RX_IRQHandler
-                0x00000504                Default_Handler
-                0x00000504                RAC_SEQ_IRQHandler
-                0x00000504                FRC_PRI_IRQHandler
-                0x00000504                EMU_IRQHandler
-                0x00000504                FRC_IRQHandler
-                0x00000504                CRYOTIMER_IRQHandler
-                0x00000504                PCNT0_IRQHandler
-                0x00000504                AGC_IRQHandler
-                0x00000504                sl_app_properties
-                0x00000504                PCNT1_IRQHandler
-                0x00000504                ACMP0_IRQHandler
-                0x00000504                USART0_RX_IRQHandler
-                0x00000504                MemManage_Handler
-                0x00000504                SVC_Handler
-                0x00000504                USART3_RX_IRQHandler
-                0x00000504                RTCC_IRQHandler
-                0x00000504                CMU_IRQHandler
-                0x00000504                RAC_RSM_IRQHandler
-                0x00000504                GPIO_ODD_IRQHandler
-                0x00000504                LESENSE_IRQHandler
-                0x00000504                USART3_TX_IRQHandler
-                0x00000504                PROTIMER_IRQHandler
-                0x00000504                BusFault_Handler
-                0x00000504                USART2_TX_IRQHandler
-                0x00000504                IDAC0_IRQHandler
- *fill*         0x00000506        0x2 
+                0x000005e8        0x2 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/startup_efr32mg12p.o
+                0x000005e8                DebugMon_Handler
+                0x000005e8                USART0_TX_IRQHandler
+                0x000005e8                I2C0_IRQHandler
+                0x000005e8                HardFault_Handler
+                0x000005e8                SysTick_Handler
+                0x000005e8                USART1_RX_IRQHandler
+                0x000005e8                PendSV_Handler
+                0x000005e8                NMI_Handler
+                0x000005e8                SYNTH_IRQHandler
+                0x000005e8                I2C1_IRQHandler
+                0x000005e8                WTIMER0_IRQHandler
+                0x000005e8                CRYPTO0_IRQHandler
+                0x000005e8                WDOG0_IRQHandler
+                0x000005e8                USART1_TX_IRQHandler
+                0x000005e8                SMU_IRQHandler
+                0x000005e8                MSC_IRQHandler
+                0x000005e8                ADC0_IRQHandler
+                0x000005e8                UsageFault_Handler
+                0x000005e8                WDOG1_IRQHandler
+                0x000005e8                LEUART0_IRQHandler
+                0x000005e8                FPUEH_IRQHandler
+                0x000005e8                WTIMER1_IRQHandler
+                0x000005e8                GPIO_EVEN_IRQHandler
+                0x000005e8                VDAC0_IRQHandler
+                0x000005e8                LDMA_IRQHandler
+                0x000005e8                CSEN_IRQHandler
+                0x000005e8                CRYPTO1_IRQHandler
+                0x000005e8                PCNT2_IRQHandler
+                0x000005e8                LETIMER0_IRQHandler
+                0x000005e8                TIMER1_IRQHandler
+                0x000005e8                TRNG0_IRQHandler
+                0x000005e8                RFSENSE_IRQHandler
+                0x000005e8                BUFC_IRQHandler
+                0x000005e8                MODEM_IRQHandler
+                0x000005e8                USART2_RX_IRQHandler
+                0x000005e8                Default_Handler
+                0x000005e8                RAC_SEQ_IRQHandler
+                0x000005e8                FRC_PRI_IRQHandler
+                0x000005e8                EMU_IRQHandler
+                0x000005e8                FRC_IRQHandler
+                0x000005e8                CRYOTIMER_IRQHandler
+                0x000005e8                PCNT0_IRQHandler
+                0x000005e8                AGC_IRQHandler
+                0x000005e8                sl_app_properties
+                0x000005e8                PCNT1_IRQHandler
+                0x000005e8                ACMP0_IRQHandler
+                0x000005e8                USART0_RX_IRQHandler
+                0x000005e8                MemManage_Handler
+                0x000005e8                SVC_Handler
+                0x000005e8                USART3_RX_IRQHandler
+                0x000005e8                RTCC_IRQHandler
+                0x000005e8                CMU_IRQHandler
+                0x000005e8                RAC_RSM_IRQHandler
+                0x000005e8                GPIO_ODD_IRQHandler
+                0x000005e8                LESENSE_IRQHandler
+                0x000005e8                USART3_TX_IRQHandler
+                0x000005e8                PROTIMER_IRQHandler
+                0x000005e8                BusFault_Handler
+                0x000005e8                USART2_TX_IRQHandler
+                0x000005e8                IDAC0_IRQHandler
+ *fill*         0x000005ea        0x2 
  .text.Reset_Handler
-                0x00000508       0x60 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/startup_efr32mg12p.o
-                0x00000508                Reset_Handler
+                0x000005ec       0x60 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/startup_efr32mg12p.o
+                0x000005ec                Reset_Handler
  .text.SystemMaxCoreClockGet
-                0x00000568        0x8 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
-                0x00000568                SystemMaxCoreClockGet
+                0x0000064c        0x8 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
+                0x0000064c                SystemMaxCoreClockGet
  .text.SystemHFClockGet
-                0x00000570       0x54 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
-                0x00000570                SystemHFClockGet
+                0x00000654       0x54 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
+                0x00000654                SystemHFClockGet
  .text.SystemCoreClockGet
-                0x000005c4       0x24 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
-                0x000005c4                SystemCoreClockGet
+                0x000006a8       0x24 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
+                0x000006a8                SystemCoreClockGet
  .text.SystemHFXOClockGet
-                0x000005e8        0xc ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
-                0x000005e8                SystemHFXOClockGet
+                0x000006cc        0xc ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
+                0x000006cc                SystemHFXOClockGet
  .text.SystemHFXOClockSet
-                0x000005f4       0x20 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
-                0x000005f4                SystemHFXOClockSet
+                0x000006d8       0x20 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
+                0x000006d8                SystemHFXOClockSet
  .text.SystemInit
-                0x00000614       0x1c ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
-                0x00000614                SystemInit
+                0x000006f8       0x1c ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
+                0x000006f8                SystemInit
  .text.SystemLFRCOClockGet
-                0x00000630        0x6 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
-                0x00000630                SystemLFRCOClockGet
+                0x00000714        0x6 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
+                0x00000714                SystemLFRCOClockGet
  .text.SystemULFRCOClockGet
-                0x00000636        0x6 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
-                0x00000636                SystemULFRCOClockGet
+                0x0000071a        0x6 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
+                0x0000071a                SystemULFRCOClockGet
  .text.SystemLFXOClockGet
-                0x0000063c        0xc ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
-                0x0000063c                SystemLFXOClockGet
+                0x00000720        0xc ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
+                0x00000720                SystemLFXOClockGet
  .text.assertEFM
-                0x00000648        0x2 ./gecko_sdk_4.1.0/platform/common/src/sl_assert.o
-                0x00000648                assertEFM
- *fill*         0x0000064a        0x2 
+                0x0000072c        0x2 ./gecko_sdk_4.1.0/platform/common/src/sl_assert.o
+                0x0000072c                assertEFM
+ *fill*         0x0000072e        0x2 
  .text.sl_debug_swo_init
-                0x0000064c       0xb0 ./gecko_sdk_4.1.0/platform/driver/debug/src/sl_debug_swo.o
-                0x0000064c                sl_debug_swo_init
+                0x00000730       0xb0 ./gecko_sdk_4.1.0/platform/driver/debug/src/sl_debug_swo.o
+                0x00000730                sl_debug_swo_init
  .text.sl_debug_swo_enable_itm
-                0x000006fc       0x18 ./gecko_sdk_4.1.0/platform/driver/debug/src/sl_debug_swo.o
-                0x000006fc                sl_debug_swo_enable_itm
+                0x000007e0       0x18 ./gecko_sdk_4.1.0/platform/driver/debug/src/sl_debug_swo.o
+                0x000007e0                sl_debug_swo_enable_itm
  .text.setHfLeConfig
-                0x00000714       0x44 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x000007f8       0x44 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
  .text.flashWaitStateControl
-                0x00000758       0x54 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x0000083c       0x54 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
  .text.SL_Log2ToDiv
-                0x000007ac       0x1c ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x00000890       0x1c ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
  .text.flashWaitStateMax
-                0x000007c8       0x28 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x000008ac       0x28 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
  .text.EMU_VScaleWait
-                0x000007f0       0x1c ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x000008d4       0x1c ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
  .text.EMU_VScaleGet
-                0x0000080c       0x14 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
- .text.syncReg  0x00000820       0x18 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x000008f0       0x14 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+ .text.syncReg  0x00000904       0x18 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
  .text.CMU_UpdateWaitStates
-                0x00000838       0x20 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
-                0x00000838                CMU_UpdateWaitStates
+                0x0000091c       0x20 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x0000091c                CMU_UpdateWaitStates
  .text.CMU_ClockEnable
-                0x00000858       0x90 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
-                0x00000858                CMU_ClockEnable
+                0x0000093c       0x90 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x0000093c                CMU_ClockEnable
  .text.CMU_ClockPrescGet
-                0x000008e8       0xec ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
-                0x000008e8                CMU_ClockPrescGet
+                0x000009cc       0xec ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x000009cc                CMU_ClockPrescGet
  .text.CMU_ClockDivGet
-                0x000009d4        0xa ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
-                0x000009d4                CMU_ClockDivGet
- *fill*         0x000009de        0x2 
+                0x00000ab8        0xa ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x00000ab8                CMU_ClockDivGet
+ *fill*         0x00000ac2        0x2 
  .text.CMU_ClockSelectGet
-                0x000009e0       0xcc ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
-                0x000009e0                CMU_ClockSelectGet
+                0x00000ac4       0xcc ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x00000ac4                CMU_ClockSelectGet
  .text.lfClkGet
-                0x00000aac       0xc8 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x00000b90       0xc8 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
  .text.CMU_ClockFreqGet
-                0x00000b74      0x1e0 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
-                0x00000b74                CMU_ClockFreqGet
+                0x00000c58      0x1e0 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x00000c58                CMU_ClockFreqGet
  .text.CMU_LFXOPrecisionSet
-                0x00000d54        0xc ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
-                0x00000d54                CMU_LFXOPrecisionSet
+                0x00000e38        0xc ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x00000e38                CMU_LFXOPrecisionSet
  .text.CMU_OscillatorTuningSet
-                0x00000d60       0xf4 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
-                0x00000d60                CMU_OscillatorTuningSet
+                0x00000e44       0xf4 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x00000e44                CMU_OscillatorTuningSet
  .text.CMU_OscillatorTuningWait
-                0x00000e54       0x68 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
-                0x00000e54                CMU_OscillatorTuningWait
+                0x00000f38       0x68 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x00000f38                CMU_OscillatorTuningWait
  .text.CMU_OscillatorTuningOptimize
-                0x00000ebc       0x38 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
-                0x00000ebc                CMU_OscillatorTuningOptimize
+                0x00000fa0       0x38 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x00000fa0                CMU_OscillatorTuningOptimize
  .text.CMU_OscillatorEnable
-                0x00000ef4      0x124 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
-                0x00000ef4                CMU_OscillatorEnable
+                0x00000fd8      0x124 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x00000fd8                CMU_OscillatorEnable
  .text.CMU_ClockSelectSet
-                0x00001018      0x214 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
-                0x00001018                CMU_ClockSelectSet
+                0x000010fc      0x214 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x000010fc                CMU_ClockSelectSet
  .text.CMU_HFXOInit
-                0x0000122c       0xb8 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
-                0x0000122c                CMU_HFXOInit
+                0x00001310       0xb8 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x00001310                CMU_HFXOInit
  .text.CMU_LFXOInit
-                0x000012e4       0x58 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
-                0x000012e4                CMU_LFXOInit
+                0x000013c8       0x58 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x000013c8                CMU_LFXOInit
  .text.CORE_EnterCritical
-                0x0000133c        0x8 ./gecko_sdk_4.1.0/platform/emlib/src/em_core.o
-                0x0000133c                CORE_EnterCritical
+                0x00001420        0x8 ./gecko_sdk_4.1.0/platform/emlib/src/em_core.o
+                0x00001420                CORE_EnterCritical
  .text.CORE_ExitCritical
-                0x00001344        0x6 ./gecko_sdk_4.1.0/platform/emlib/src/em_core.o
-                0x00001344                CORE_ExitCritical
- *fill*         0x0000134a        0x2 
+                0x00001428        0x6 ./gecko_sdk_4.1.0/platform/emlib/src/em_core.o
+                0x00001428                CORE_ExitCritical
+ *fill*         0x0000142e        0x2 
  .text.EMU_LDOStatusGet
-                0x0000134c       0x14 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
+                0x00001430       0x14 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
  .text.lpGetDevinfoVrefLowHigh
-                0x00001360       0xa8 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
+                0x00001444       0xa8 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
  .text.EMU_VScaleWait
-                0x00001408       0x18 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
+                0x000014ec       0x18 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
  .text.lpCmpHystCalibrationLoad.constprop.0
-                0x00001420       0x78 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
+                0x00001504       0x78 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
  .text.EMU_EM4Init
-                0x00001498       0x54 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
-                0x00001498                EMU_EM4Init
+                0x0000157c       0x54 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
+                0x0000157c                EMU_EM4Init
  .text.EMU_VScaleEM01
-                0x000014ec       0x80 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
-                0x000014ec                EMU_VScaleEM01
+                0x000015d0       0x80 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
+                0x000015d0                EMU_VScaleEM01
  .text.EMU_VScaleEM01ByClock
-                0x0000156c       0x50 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
-                0x0000156c                EMU_VScaleEM01ByClock
+                0x00001650       0x50 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
+                0x00001650                EMU_VScaleEM01ByClock
  .text.EMU_DCDCModeSet
-                0x000015bc       0x94 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
-                0x000015bc                EMU_DCDCModeSet
+                0x000016a0       0x94 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
+                0x000016a0                EMU_DCDCModeSet
  .text.EMU_DCDCOutputVoltageSet
-                0x00001650      0x18c ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
-                0x00001650                EMU_DCDCOutputVoltageSet
+                0x00001734      0x18c ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
+                0x00001734                EMU_DCDCOutputVoltageSet
  .text.EMU_DCDCOptimizeSlice
-                0x000017dc       0xe0 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
-                0x000017dc                EMU_DCDCOptimizeSlice
+                0x000018c0       0xe0 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
+                0x000018c0                EMU_DCDCOptimizeSlice
  .text.EMU_DCDCLnRcoBandSet
-                0x000018bc       0x44 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
-                0x000018bc                EMU_DCDCLnRcoBandSet
+                0x000019a0       0x44 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
+                0x000019a0                EMU_DCDCLnRcoBandSet
  .text.EMU_DCDCInit
-                0x00001900      0x18c ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
-                0x00001900                EMU_DCDCInit
+                0x000019e4      0x18c ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
+                0x000019e4                EMU_DCDCInit
  .text.GPIO_PinOutSet
-                0x00001a8c       0x88 ./gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o
+                0x00001b70       0x88 ./gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o
  .text.GPIO_PinOutClear
-                0x00001b14       0x88 ./gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o
+                0x00001bf8       0x88 ./gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o
  .text.BUS_RegMaskedWrite
-                0x00001b9c       0x22 ./gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o
- *fill*         0x00001bbe        0x2 
+                0x00001c80       0x22 ./gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o
+ *fill*         0x00001ca2        0x2 
  .text.GPIO_DbgLocationSet
-                0x00001bc0       0x2c ./gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o
-                0x00001bc0                GPIO_DbgLocationSet
+                0x00001ca4       0x2c ./gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o
+                0x00001ca4                GPIO_DbgLocationSet
  .text.GPIO_PinModeSet
-                0x00001bec       0xd4 ./gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o
-                0x00001bec                GPIO_PinModeSet
+                0x00001cd0       0xd4 ./gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o
+                0x00001cd0                GPIO_PinModeSet
  .text.USART_BaudrateAsyncSet
-                0x00001cc0       0xe0 ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
-                0x00001cc0                USART_BaudrateAsyncSet
+                0x00001da4       0xe0 ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
+                0x00001da4                USART_BaudrateAsyncSet
  .text.USART_BaudrateSyncSet
-                0x00001da0       0x4c ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
-                0x00001da0                USART_BaudrateSyncSet
+                0x00001e84       0x4c ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
+                0x00001e84                USART_BaudrateSyncSet
  .text.USART_Reset
-                0x00001dec       0x90 ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
-                0x00001dec                USART_Reset
+                0x00001ed0       0x90 ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
+                0x00001ed0                USART_Reset
  .text.USART_InitAsync
-                0x00001e7c       0xb0 ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
-                0x00001e7c                USART_InitAsync
+                0x00001f60       0xb0 ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
+                0x00001f60                USART_InitAsync
  .text.USART_InitSync
-                0x00001f2c       0xc0 ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
-                0x00001f2c                USART_InitSync
+                0x00002010       0xc0 ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
+                0x00002010                USART_InitSync
  .text.USART_Rx
-                0x00001fec        0xc ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
-                0x00001fec                USART_Rx
+                0x000020d0        0xc ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
+                0x000020d0                USART_Rx
  .text.USART_SpiTransfer
-                0x00001ff8       0x14 ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
-                0x00001ff8                USART_SpiTransfer
+                0x000020dc       0x14 ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
+                0x000020dc                USART_SpiTransfer
  .text.USART_Tx
-                0x0000200c        0xa ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
-                0x0000200c                USART_Tx
- *fill*         0x00002016        0x2 
+                0x000020f0        0xa ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
+                0x000020f0                USART_Tx
+ *fill*         0x000020fa        0x2 
  .text.sl_device_init_dcdc
-                0x00002018       0x2c ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_dcdc_s1.o
-                0x00002018                sl_device_init_dcdc
+                0x000020fc       0x2c ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_dcdc_s1.o
+                0x000020fc                sl_device_init_dcdc
  .text.sl_device_init_emu
-                0x00002044       0x1c ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_emu_s1.o
-                0x00002044                sl_device_init_emu
+                0x00002128       0x1c ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_emu_s1.o
+                0x00002128                sl_device_init_emu
  .text.sl_device_init_hfxo
-                0x00002060       0x6c ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_hfxo_s1.o
-                0x00002060                sl_device_init_hfxo
+                0x00002144       0x6c ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_hfxo_s1.o
+                0x00002144                sl_device_init_hfxo
  .text.sl_device_init_lfxo
-                0x000020cc       0x28 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_lfxo_s1.o
-                0x000020cc                sl_device_init_lfxo
+                0x000021b0       0x28 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_lfxo_s1.o
+                0x000021b0                sl_device_init_lfxo
  .text.sl_device_init_nvic
-                0x000020f4       0x3c ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_nvic.o
-                0x000020f4                sl_device_init_nvic
+                0x000021d8       0x3c ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_nvic.o
+                0x000021d8                sl_device_init_nvic
  .text.sl_system_init
-                0x00002130       0x1a ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_init.o
-                0x00002130                sl_system_init
+                0x00002214       0x1a ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_init.o
+                0x00002214                sl_system_init
  .text.sl_system_process_action
-                0x0000214a       0x16 ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_process_action.o
-                0x0000214a                sl_system_process_action
+                0x0000222e       0x16 ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_process_action.o
+                0x0000222e                sl_system_process_action
  .text.sl_udelay_wait
-                0x00002160       0x54 ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay.o
-                0x00002160                sl_udelay_wait
- *fill*         0x000021b4        0xc 
- .text          0x000021c0        0x8 ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay_armv6m_gcc.o
-                0x000021c0                sli_delay_loop
- .text.exit     0x000021c8       0x28 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc_nano.a(lib_a-exit.o)
-                0x000021c8                exit
+                0x00002244       0x54 ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay.o
+                0x00002244                sl_udelay_wait
+ *fill*         0x00002298        0x8 
+ .text          0x000022a0        0x8 ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay_armv6m_gcc.o
+                0x000022a0                sli_delay_loop
+ .text.exit     0x000022a8       0x28 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc_nano.a(lib_a-exit.o)
+                0x000022a8                exit
  .text.__libc_init_array
-                0x000021f0       0x48 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc_nano.a(lib_a-init.o)
-                0x000021f0                __libc_init_array
- .text.memset   0x00002238       0x10 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc_nano.a(lib_a-memset.o)
-                0x00002238                memset
- .text._exit    0x00002248        0x4 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libnosys.a(_exit.o)
-                0x00002248                _exit
-                0x0000224c                linker_code_end = .
+                0x000022d0       0x48 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc_nano.a(lib_a-init.o)
+                0x000022d0                __libc_init_array
+ .text.memset   0x00002318       0x10 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc_nano.a(lib_a-memset.o)
+                0x00002318                memset
+ .text._exit    0x00002328        0x4 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libnosys.a(_exit.o)
+                0x00002328                _exit
+                0x0000232c                linker_code_end = .
  *(.init)
- .init          0x0000224c        0x4 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crti.o
-                0x0000224c                _init
- .init          0x00002250        0x8 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtn.o
+ .init          0x0000232c        0x4 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crti.o
+                0x0000232c                _init
+ .init          0x00002330        0x8 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtn.o
  *(.fini)
- .fini          0x00002258        0x4 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crti.o
-                0x00002258                _fini
- .fini          0x0000225c        0x8 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtn.o
+ .fini          0x00002338        0x4 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crti.o
+                0x00002338                _fini
+ .fini          0x0000233c        0x8 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtn.o
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -3518,88 +3523,88 @@ LOAD c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.1
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.rodata*)
- .rodata        0x00002264       0x1c ./gecko_sdk_4.1.0/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
+ .rodata        0x00002344       0x1c ./gecko_sdk_4.1.0/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
  .rodata.flashWaitStateControl.str1.1
-                0x00002280       0x50 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x00002360       0x50 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
  .rodata.SL_Log2ToDiv.str1.1
-                0x000022d0       0x54 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x000023b0       0x54 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
  .rodata.CSWTCH.52
-                0x00002324        0x6 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x00002404        0x6 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
  .rodata.CSWTCH.53
-                0x0000232a        0x4 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x0000240a        0x4 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
  .rodata.CSWTCH.54
-                0x0000232e        0x4 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x0000240e        0x4 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
  .rodata.CSWTCH.73
-                0x00002332        0x5 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x00002412        0x5 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
  .rodata.CSWTCH.74
-                0x00002337        0x5 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x00002417        0x5 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
  .rodata.CSWTCH.75
-                0x0000233c        0xa ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x0000241c        0xa ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
  .rodata.CSWTCH.76
-                0x00002346        0xa ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x00002426        0xa ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
  .rodata.flashWsTable
-                0x00002350       0x28 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x00002430       0x28 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
  .rodata.lpGetDevinfoVrefLowHigh.str1.1
-                0x00002378       0x50 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
+                0x00002458       0x50 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
  .rodata.GPIO_PinOutSet.str1.1
-                0x000023c8       0x51 ./gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o
+                0x000024a8       0x51 ./gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o
  .rodata.GPIO_DbgLocationSet.str1.1
-                0x00002419       0x51 ./gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o
+                0x000024f9       0x51 ./gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o
  .rodata.USART_BaudrateAsyncSet.str1.1
-                0x0000246a       0x52 ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
- .rodata        0x000024bc       0x10 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_dcdc_s1.o
- .rodata        0x000024cc       0x12 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_hfxo_s1.o
- .rodata        0x000024de        0x4 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_lfxo_s1.o
+                0x0000254a       0x52 ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
+ .rodata        0x0000259c       0x10 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_dcdc_s1.o
+ .rodata        0x000025ac       0x12 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_hfxo_s1.o
+ .rodata        0x000025be        0x4 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_lfxo_s1.o
  .rodata.sl_udelay_wait.str1.1
-                0x000024e2       0x5c ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay.o
- *fill*         0x0000253e        0x2 
+                0x000025c2       0x5c ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay.o
+ *fill*         0x0000261e        0x2 
  .rodata._global_impure_ptr
-                0x00002540        0x4 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc_nano.a(lib_a-impure.o)
-                0x00002540                _global_impure_ptr
+                0x00002620        0x4 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc_nano.a(lib_a-impure.o)
+                0x00002620                _global_impure_ptr
  *(.eh_frame*)
- .eh_frame      0x00002544        0x0 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
+ .eh_frame      0x00002624        0x0 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
 
-.glue_7         0x00002544        0x0
- .glue_7        0x00002544        0x0 linker stubs
+.glue_7         0x00002624        0x0
+ .glue_7        0x00002624        0x0 linker stubs
 
-.glue_7t        0x00002544        0x0
- .glue_7t       0x00002544        0x0 linker stubs
+.glue_7t        0x00002624        0x0
+ .glue_7t       0x00002624        0x0 linker stubs
 
-.vfp11_veneer   0x00002544        0x0
- .vfp11_veneer  0x00002544        0x0 linker stubs
+.vfp11_veneer   0x00002624        0x0
+ .vfp11_veneer  0x00002624        0x0 linker stubs
 
-.v4_bx          0x00002544        0x0
- .v4_bx         0x00002544        0x0 linker stubs
+.v4_bx          0x00002624        0x0
+ .v4_bx         0x00002624        0x0 linker stubs
 
-.iplt           0x00002544        0x0
- .iplt          0x00002544        0x0 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
+.iplt           0x00002624        0x0
+ .iplt          0x00002624        0x0 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x00002544                __exidx_start = .
+                0x00002624                __exidx_start = .
 
-.ARM.exidx      0x00002544        0x8
+.ARM.exidx      0x00002624        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x00002544        0x8 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+ .ARM.exidx     0x00002624        0x8 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
                                  0x10 (size before relaxing)
-                0x0000254c                __exidx_end = .
+                0x0000262c                __exidx_end = .
 
-.rel.dyn        0x0000254c        0x0
- .rel.iplt      0x0000254c        0x0 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
+.rel.dyn        0x0000262c        0x0
+ .rel.iplt      0x0000262c        0x0 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
 
-.copy.table     0x0000254c        0xc
-                0x0000254c                . = ALIGN (0x4)
-                0x0000254c                __copy_table_start__ = .
-                0x0000254c        0x4 LONG 0x2558 __etext
-                0x00002550        0x4 LONG 0x20001000 __data_start__
-                0x00002554        0x4 LONG 0x2b ((__data_end__ - __data_start__) / 0x4)
-                0x00002558                __copy_table_end__ = .
+.copy.table     0x0000262c        0xc
+                0x0000262c                . = ALIGN (0x4)
+                0x0000262c                __copy_table_start__ = .
+                0x0000262c        0x4 LONG 0x2638 __etext
+                0x00002630        0x4 LONG 0x20001000 __data_start__
+                0x00002634        0x4 LONG 0x2d ((__data_end__ - __data_start__) / 0x4)
+                0x00002638                __copy_table_end__ = .
 
-.zero.table     0x00002558        0x0
-                0x00002558                . = ALIGN (0x4)
-                0x00002558                __zero_table_start__ = .
-                0x00002558                __zero_table_end__ = .
-                0x00002558                __etext = .
+.zero.table     0x00002638        0x0
+                0x00002638                . = ALIGN (0x4)
+                0x00002638                __zero_table_start__ = .
+                0x00002638                __zero_table_end__ = .
+                0x00002638                __etext = .
                 0x20000000                . = ORIGIN (RAM)
 
 .stack          0x20000000     0x1000
@@ -3613,7 +3618,7 @@ LOAD c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.1
 .noinit
  *(.noinit*)
 
-.data           0x20001000       0xac load address 0x00002558
+.data           0x20001000       0xb4 load address 0x00002638
                 0x20001000                . = ALIGN (0x4)
                 0x20001000                __data_start__ = .
  *(vtable)
@@ -3621,94 +3626,95 @@ LOAD c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.1
  .data.init     0x20001000       0x1c ./app.o
                 0x20001000                init
  .data.welcome_string
-                0x2000101c        0xf ./app.o
+                0x2000101c       0x18 ./app.o
                 0x2000101c                welcome_string
- *fill*         0x2000102b        0x1 
  .data.SystemCoreClock
-                0x2000102c        0x4 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
-                0x2000102c                SystemCoreClock
- .data.SystemHFXOClock
-                0x20001030        0x4 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
- .data.SystemHfrcoFreq
                 0x20001034        0x4 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
-                0x20001034                SystemHfrcoFreq
- .data.SystemLFXOClock
+                0x20001034                SystemCoreClock
+ .data.SystemHFXOClock
                 0x20001038        0x4 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
+ .data.SystemHfrcoFreq
+                0x2000103c        0x4 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
+                0x2000103c                SystemHfrcoFreq
+ .data.SystemLFXOClock
+                0x20001040        0x4 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
  .data.auxHfrcoFreq
-                0x2000103c        0x4 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x20001044        0x4 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
  .data.lfxo_precision
-                0x20001040        0x2 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
- *fill*         0x20001042        0x2 
+                0x20001048        0x2 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+ *fill*         0x2000104a        0x2 
  .data.impure_data
-                0x20001044       0x60 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc_nano.a(lib_a-impure.o)
-                0x200010a4                . = ALIGN (0x4)
+                0x2000104c       0x60 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc_nano.a(lib_a-impure.o)
+                0x200010ac                . = ALIGN (0x4)
                 [!provide]                PROVIDE (__ram_func_section_start = .)
  *(.ram)
                 [!provide]                PROVIDE (__ram_func_section_end = .)
-                0x200010a4                . = ALIGN (0x4)
-                0x200010a4                PROVIDE (__preinit_array_start = .)
+                0x200010ac                . = ALIGN (0x4)
+                0x200010ac                PROVIDE (__preinit_array_start = .)
  *(.preinit_array)
-                0x200010a4                PROVIDE (__preinit_array_end = .)
-                0x200010a4                . = ALIGN (0x4)
-                0x200010a4                PROVIDE (__init_array_start = .)
+                0x200010ac                PROVIDE (__preinit_array_end = .)
+                0x200010ac                . = ALIGN (0x4)
+                0x200010ac                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array)
- .init_array    0x200010a4        0x4 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
-                0x200010a8                PROVIDE (__init_array_end = .)
-                0x200010a8                . = ALIGN (0x4)
+ .init_array    0x200010ac        0x4 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
+                0x200010b0                PROVIDE (__init_array_end = .)
+                0x200010b0                . = ALIGN (0x4)
                 [!provide]                PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array)
- .fini_array    0x200010a8        0x4 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
+ .fini_array    0x200010b0        0x4 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
                 [!provide]                PROVIDE (__fini_array_end = .)
-                0x200010ac                . = ALIGN (0x4)
-                0x200010ac                __data_end__ = .
+                0x200010b4                . = ALIGN (0x4)
+                0x200010b4                __data_end__ = .
 
-.igot.plt       0x200010ac        0x0 load address 0x00002604
- .igot.plt      0x200010ac        0x0 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
+.igot.plt       0x200010b4        0x0 load address 0x000026ec
+ .igot.plt      0x200010b4        0x0 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
 
-.bss            0x200010ac       0x7c load address 0x00002604
-                0x200010ac                . = ALIGN (0x4)
-                0x200010ac                __bss_start__ = .
+.bss            0x200010b4       0x80 load address 0x000026ec
+                0x200010b4                . = ALIGN (0x4)
+                0x200010b4                __bss_start__ = .
  *(.bss*)
- .bss           0x200010ac       0x1c c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
- .bss.buffer    0x200010c8       0x50 ./app.o
-                0x200010c8                buffer
- .bss.i         0x20001118        0x4 ./app.o
-                0x20001118                i
- .bss.j         0x2000111c        0x4 ./app.o
-                0x2000111c                j
+ .bss           0x200010b4       0x1c c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
+ .bss.buffer    0x200010d0       0x50 ./app.o
+                0x200010d0                buffer
+ .bss.i         0x20001120        0x4 ./app.o
+                0x20001120                i
+ .bss.j         0x20001124        0x4 ./app.o
+                0x20001124                j
+ .bss.z         0x20001128        0x4 ./app.o
+                0x20001128                z
  .bss.dcdcEm01LoadCurrent_mA
-                0x20001120        0x2 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
+                0x2000112c        0x2 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
  .bss.dcdcMaxCurrent_mA
-                0x20001122        0x2 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
+                0x2000112e        0x2 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
  .bss.dcdcReverseCurrentControl
-                0x20001124        0x2 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
+                0x20001130        0x2 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
  .bss.vScaleEM01Config
-                0x20001126        0x1 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
+                0x20001132        0x1 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
  *(COMMON)
-                0x20001128                . = ALIGN (0x4)
- *fill*         0x20001127        0x1 
-                0x20001128                __bss_end__ = .
+                0x20001134                . = ALIGN (0x4)
+ *fill*         0x20001133        0x1 
+                0x20001134                __bss_end__ = .
 
-.heap           0x20001128    0x3eed8
-                0x20001128                __HeapBase = .
-                0x20001128                __end__ = .
-                0x20001128                end = __end__
-                0x20001128                _end = __end__
+.heap           0x20001138    0x3eec8
+                0x20001138                __HeapBase = .
+                0x20001138                __end__ = .
+                0x20001138                end = __end__
+                0x20001138                _end = __end__
  *(.heap*)
- .heap          0x20001128      0x800 ./gecko_sdk_4.1.0/platform/common/toolchain/src/sl_memory.o
+ .heap          0x20001138      0x800 ./gecko_sdk_4.1.0/platform/common/toolchain/src/sl_memory.o
                 0x20040000                . = (ORIGIN (RAM) + LENGTH (RAM))
- *fill*         0x20001928    0x3e6d8 
+ *fill*         0x20001938    0x3e6c8 
                 0x20040000                __HeapLimit = .
-                0x0003eed8                __heap_size = (__HeapLimit - __HeapBase)
+                0x0003eec8                __heap_size = (__HeapLimit - __HeapBase)
                 0x00100000                __main_flash_end__ = 0x100000
 
 .internal_storage
-                0x00002558        0x0
+                0x00002638        0x0
  *(.internal_storage*)
 
-.nvm            0x00002558        0x0
+.nvm            0x00002638        0x0
  *(.simee*)
                 0x00100000                linker_nvm_end = __main_flash_end__
                 0x00100000                linker_nvm_begin = (linker_nvm_end - SIZEOF (.nvm))
@@ -3718,7 +3724,7 @@ LOAD c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.1
                 0x00000000                linker_storage_size = SIZEOF (.internal_storage)
                 0x00100000                __nvm3Base = linker_nvm_begin
                 0x00000001                ASSERT ((linker_storage_begin >= (__etext + SIZEOF (.data))), FLASH memory overflowed !)
-OUTPUT(usart.axf elf32-littlearm)
+OUTPUT(usart_int.axf elf32-littlearm)
 LOAD linker stubs
 
 .ARM.attributes
@@ -3828,412 +3834,413 @@ LOAD linker stubs
  .comment       0x00000049       0x4a ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_process_action.o
  .comment       0x00000049       0x4a ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay.o
 
-.debug_info     0x00000000    0x11d70
- .debug_info    0x00000000      0x99a ./app.o
- .debug_info    0x0000099a       0xb1 ./main.o
- .debug_info    0x00000a4b       0xa7 ./autogen/sl_board_default_init.o
- .debug_info    0x00000af2      0x36f ./autogen/sl_device_init_clocks.o
- .debug_info    0x00000e61      0xf60 ./autogen/sl_event_handler.o
- .debug_info    0x00001dc1      0x56c ./gecko_sdk_4.1.0/hardware/board/src/sl_board_control_gpio.o
- .debug_info    0x0000232d      0x2d0 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_init.o
- .debug_info    0x000025fd      0x3e6 ./gecko_sdk_4.1.0/hardware/driver/configuration_over_swo/src/sl_cos.o
- .debug_info    0x000029e3      0xdb6 ./gecko_sdk_4.1.0/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
- .debug_info    0x00003799      0x32b ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/startup_efr32mg12p.o
- .debug_info    0x00003ac4      0x9c9 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
- .debug_info    0x0000448d       0x8a ./gecko_sdk_4.1.0/platform/common/src/sl_assert.o
- .debug_info    0x00004517      0x209 ./gecko_sdk_4.1.0/platform/common/toolchain/src/sl_memory.o
- .debug_info    0x00004720      0xf56 ./gecko_sdk_4.1.0/platform/driver/debug/src/sl_debug_swo.o
- .debug_info    0x00005676     0x40c3 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
- .debug_info    0x00009739     0x11a2 ./gecko_sdk_4.1.0/platform/emlib/src/em_core.o
- .debug_info    0x0000a8db     0x3813 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
- .debug_info    0x0000e0ee      0xf9e ./gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o
- .debug_info    0x0000f08c     0x1546 ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
- .debug_info    0x000105d2      0x273 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_dcdc_s1.o
- .debug_info    0x00010845      0x1e3 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_emu_s1.o
- .debug_info    0x00010a28      0x89c ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_hfxo_s1.o
- .debug_info    0x000112c4      0x1b4 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_lfxo_s1.o
- .debug_info    0x00011478      0x60d ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_nvic.o
- .debug_info    0x00011a85       0xbe ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_init.o
- .debug_info    0x00011b43       0xa7 ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_process_action.o
- .debug_info    0x00011bea      0x160 ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay.o
- .debug_info    0x00011d4a       0x26 ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay_armv6m_gcc.o
+.debug_info     0x00000000    0x127b5
+ .debug_info    0x00000000     0x13df ./app.o
+ .debug_info    0x000013df       0xb1 ./main.o
+ .debug_info    0x00001490       0xa7 ./autogen/sl_board_default_init.o
+ .debug_info    0x00001537      0x36f ./autogen/sl_device_init_clocks.o
+ .debug_info    0x000018a6      0xf60 ./autogen/sl_event_handler.o
+ .debug_info    0x00002806      0x56c ./gecko_sdk_4.1.0/hardware/board/src/sl_board_control_gpio.o
+ .debug_info    0x00002d72      0x2d0 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_init.o
+ .debug_info    0x00003042      0x3e6 ./gecko_sdk_4.1.0/hardware/driver/configuration_over_swo/src/sl_cos.o
+ .debug_info    0x00003428      0xdb6 ./gecko_sdk_4.1.0/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
+ .debug_info    0x000041de      0x32b ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/startup_efr32mg12p.o
+ .debug_info    0x00004509      0x9c9 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
+ .debug_info    0x00004ed2       0x8a ./gecko_sdk_4.1.0/platform/common/src/sl_assert.o
+ .debug_info    0x00004f5c      0x209 ./gecko_sdk_4.1.0/platform/common/toolchain/src/sl_memory.o
+ .debug_info    0x00005165      0xf56 ./gecko_sdk_4.1.0/platform/driver/debug/src/sl_debug_swo.o
+ .debug_info    0x000060bb     0x40c3 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+ .debug_info    0x0000a17e     0x11a2 ./gecko_sdk_4.1.0/platform/emlib/src/em_core.o
+ .debug_info    0x0000b320     0x3813 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
+ .debug_info    0x0000eb33      0xf9e ./gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o
+ .debug_info    0x0000fad1     0x1546 ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
+ .debug_info    0x00011017      0x273 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_dcdc_s1.o
+ .debug_info    0x0001128a      0x1e3 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_emu_s1.o
+ .debug_info    0x0001146d      0x89c ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_hfxo_s1.o
+ .debug_info    0x00011d09      0x1b4 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_lfxo_s1.o
+ .debug_info    0x00011ebd      0x60d ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_nvic.o
+ .debug_info    0x000124ca       0xbe ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_init.o
+ .debug_info    0x00012588       0xa7 ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_process_action.o
+ .debug_info    0x0001262f      0x160 ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay.o
+ .debug_info    0x0001278f       0x26 ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay_armv6m_gcc.o
 
-.debug_abbrev   0x00000000     0x2fcb
- .debug_abbrev  0x00000000      0x195 ./app.o
- .debug_abbrev  0x00000195       0x61 ./main.o
- .debug_abbrev  0x000001f6       0x6d ./autogen/sl_board_default_init.o
- .debug_abbrev  0x00000263       0xd3 ./autogen/sl_device_init_clocks.o
- .debug_abbrev  0x00000336      0x19c ./autogen/sl_event_handler.o
- .debug_abbrev  0x000004d2      0x182 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_control_gpio.o
- .debug_abbrev  0x00000654       0xff ./gecko_sdk_4.1.0/hardware/board/src/sl_board_init.o
- .debug_abbrev  0x00000753      0x1fd ./gecko_sdk_4.1.0/hardware/driver/configuration_over_swo/src/sl_cos.o
- .debug_abbrev  0x00000950      0x26a ./gecko_sdk_4.1.0/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
- .debug_abbrev  0x00000bba      0x1cc ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/startup_efr32mg12p.o
- .debug_abbrev  0x00000d86      0x234 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
- .debug_abbrev  0x00000fba       0x6f ./gecko_sdk_4.1.0/platform/common/src/sl_assert.o
- .debug_abbrev  0x00001029      0x121 ./gecko_sdk_4.1.0/platform/common/toolchain/src/sl_memory.o
- .debug_abbrev  0x0000114a      0x2cb ./gecko_sdk_4.1.0/platform/driver/debug/src/sl_debug_swo.o
- .debug_abbrev  0x00001415      0x572 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
- .debug_abbrev  0x00001987      0x31b ./gecko_sdk_4.1.0/platform/emlib/src/em_core.o
- .debug_abbrev  0x00001ca2      0x58f ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
- .debug_abbrev  0x00002231      0x32a ./gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o
- .debug_abbrev  0x0000255b      0x32e ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
- .debug_abbrev  0x00002889       0xf6 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_dcdc_s1.o
- .debug_abbrev  0x0000297f       0xf6 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_emu_s1.o
- .debug_abbrev  0x00002a75      0x16b ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_hfxo_s1.o
- .debug_abbrev  0x00002be0       0xf2 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_lfxo_s1.o
- .debug_abbrev  0x00002cd2      0x156 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_nvic.o
- .debug_abbrev  0x00002e28       0x62 ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_init.o
- .debug_abbrev  0x00002e8a       0x62 ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_process_action.o
- .debug_abbrev  0x00002eec       0xcb ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay.o
- .debug_abbrev  0x00002fb7       0x14 ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay_armv6m_gcc.o
+.debug_abbrev   0x00000000     0x30bc
+ .debug_abbrev  0x00000000      0x286 ./app.o
+ .debug_abbrev  0x00000286       0x61 ./main.o
+ .debug_abbrev  0x000002e7       0x6d ./autogen/sl_board_default_init.o
+ .debug_abbrev  0x00000354       0xd3 ./autogen/sl_device_init_clocks.o
+ .debug_abbrev  0x00000427      0x19c ./autogen/sl_event_handler.o
+ .debug_abbrev  0x000005c3      0x182 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_control_gpio.o
+ .debug_abbrev  0x00000745       0xff ./gecko_sdk_4.1.0/hardware/board/src/sl_board_init.o
+ .debug_abbrev  0x00000844      0x1fd ./gecko_sdk_4.1.0/hardware/driver/configuration_over_swo/src/sl_cos.o
+ .debug_abbrev  0x00000a41      0x26a ./gecko_sdk_4.1.0/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
+ .debug_abbrev  0x00000cab      0x1cc ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/startup_efr32mg12p.o
+ .debug_abbrev  0x00000e77      0x234 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
+ .debug_abbrev  0x000010ab       0x6f ./gecko_sdk_4.1.0/platform/common/src/sl_assert.o
+ .debug_abbrev  0x0000111a      0x121 ./gecko_sdk_4.1.0/platform/common/toolchain/src/sl_memory.o
+ .debug_abbrev  0x0000123b      0x2cb ./gecko_sdk_4.1.0/platform/driver/debug/src/sl_debug_swo.o
+ .debug_abbrev  0x00001506      0x572 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+ .debug_abbrev  0x00001a78      0x31b ./gecko_sdk_4.1.0/platform/emlib/src/em_core.o
+ .debug_abbrev  0x00001d93      0x58f ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
+ .debug_abbrev  0x00002322      0x32a ./gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o
+ .debug_abbrev  0x0000264c      0x32e ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
+ .debug_abbrev  0x0000297a       0xf6 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_dcdc_s1.o
+ .debug_abbrev  0x00002a70       0xf6 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_emu_s1.o
+ .debug_abbrev  0x00002b66      0x16b ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_hfxo_s1.o
+ .debug_abbrev  0x00002cd1       0xf2 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_lfxo_s1.o
+ .debug_abbrev  0x00002dc3      0x156 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_nvic.o
+ .debug_abbrev  0x00002f19       0x62 ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_init.o
+ .debug_abbrev  0x00002f7b       0x62 ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_process_action.o
+ .debug_abbrev  0x00002fdd       0xcb ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay.o
+ .debug_abbrev  0x000030a8       0x14 ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay_armv6m_gcc.o
 
-.debug_loc      0x00000000     0x87f6
- .debug_loc     0x00000000       0x20 ./app.o
- .debug_loc     0x00000020       0x20 ./main.o
- .debug_loc     0x00000040       0x20 ./autogen/sl_device_init_clocks.o
- .debug_loc     0x00000060       0x71 ./autogen/sl_event_handler.o
- .debug_loc     0x000000d1      0x2ee ./gecko_sdk_4.1.0/hardware/board/src/sl_board_control_gpio.o
- .debug_loc     0x000003bf       0x2c ./gecko_sdk_4.1.0/hardware/board/src/sl_board_init.o
- .debug_loc     0x000003eb      0x265 ./gecko_sdk_4.1.0/hardware/driver/configuration_over_swo/src/sl_cos.o
- .debug_loc     0x00000650      0x124 ./gecko_sdk_4.1.0/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
- .debug_loc     0x00000774       0x8e ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/startup_efr32mg12p.o
- .debug_loc     0x00000802       0xd8 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
- .debug_loc     0x000008da       0x2a ./gecko_sdk_4.1.0/platform/common/src/sl_assert.o
- .debug_loc     0x00000904       0x9c ./gecko_sdk_4.1.0/platform/common/toolchain/src/sl_memory.o
- .debug_loc     0x000009a0      0x23d ./gecko_sdk_4.1.0/platform/driver/debug/src/sl_debug_swo.o
- .debug_loc     0x00000bdd     0x33c7 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
- .debug_loc     0x00003fa4      0x8d6 ./gecko_sdk_4.1.0/platform/emlib/src/em_core.o
- .debug_loc     0x0000487a     0x23cf ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
- .debug_loc     0x00006c49      0xdf2 ./gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o
- .debug_loc     0x00007a3b      0xa54 ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
- .debug_loc     0x0000848f       0x2c ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_dcdc_s1.o
- .debug_loc     0x000084bb       0x2c ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_emu_s1.o
- .debug_loc     0x000084e7       0x77 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_hfxo_s1.o
- .debug_loc     0x0000855e       0x2c ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_lfxo_s1.o
- .debug_loc     0x0000858a       0x6f ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_nvic.o
- .debug_loc     0x000085f9       0x2c ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_init.o
- .debug_loc     0x00008625       0x2c ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_process_action.o
- .debug_loc     0x00008651      0x1a5 ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay.o
+.debug_loc      0x00000000     0x88b2
+ .debug_loc     0x00000000       0xdc ./app.o
+ .debug_loc     0x000000dc       0x20 ./main.o
+ .debug_loc     0x000000fc       0x20 ./autogen/sl_device_init_clocks.o
+ .debug_loc     0x0000011c       0x71 ./autogen/sl_event_handler.o
+ .debug_loc     0x0000018d      0x2ee ./gecko_sdk_4.1.0/hardware/board/src/sl_board_control_gpio.o
+ .debug_loc     0x0000047b       0x2c ./gecko_sdk_4.1.0/hardware/board/src/sl_board_init.o
+ .debug_loc     0x000004a7      0x265 ./gecko_sdk_4.1.0/hardware/driver/configuration_over_swo/src/sl_cos.o
+ .debug_loc     0x0000070c      0x124 ./gecko_sdk_4.1.0/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
+ .debug_loc     0x00000830       0x8e ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/startup_efr32mg12p.o
+ .debug_loc     0x000008be       0xd8 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
+ .debug_loc     0x00000996       0x2a ./gecko_sdk_4.1.0/platform/common/src/sl_assert.o
+ .debug_loc     0x000009c0       0x9c ./gecko_sdk_4.1.0/platform/common/toolchain/src/sl_memory.o
+ .debug_loc     0x00000a5c      0x23d ./gecko_sdk_4.1.0/platform/driver/debug/src/sl_debug_swo.o
+ .debug_loc     0x00000c99     0x33c7 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+ .debug_loc     0x00004060      0x8d6 ./gecko_sdk_4.1.0/platform/emlib/src/em_core.o
+ .debug_loc     0x00004936     0x23cf ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
+ .debug_loc     0x00006d05      0xdf2 ./gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o
+ .debug_loc     0x00007af7      0xa54 ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
+ .debug_loc     0x0000854b       0x2c ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_dcdc_s1.o
+ .debug_loc     0x00008577       0x2c ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_emu_s1.o
+ .debug_loc     0x000085a3       0x77 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_hfxo_s1.o
+ .debug_loc     0x0000861a       0x2c ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_lfxo_s1.o
+ .debug_loc     0x00008646       0x6f ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_nvic.o
+ .debug_loc     0x000086b5       0x2c ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_init.o
+ .debug_loc     0x000086e1       0x2c ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_process_action.o
+ .debug_loc     0x0000870d      0x1a5 ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay.o
 
-.debug_aranges  0x00000000      0x8d8
+.debug_aranges  0x00000000      0x8e8
  .debug_aranges
-                0x00000000       0x28 ./app.o
+                0x00000000       0x38 ./app.o
  .debug_aranges
-                0x00000028       0x20 ./main.o
+                0x00000038       0x20 ./main.o
  .debug_aranges
-                0x00000048       0x20 ./autogen/sl_board_default_init.o
+                0x00000058       0x20 ./autogen/sl_board_default_init.o
  .debug_aranges
-                0x00000068       0x20 ./autogen/sl_device_init_clocks.o
+                0x00000078       0x20 ./autogen/sl_device_init_clocks.o
  .debug_aranges
-                0x00000088       0x38 ./autogen/sl_event_handler.o
+                0x00000098       0x38 ./autogen/sl_event_handler.o
  .debug_aranges
-                0x000000c0       0x70 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_control_gpio.o
+                0x000000d0       0x70 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_control_gpio.o
  .debug_aranges
-                0x00000130       0x28 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_init.o
+                0x00000140       0x28 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_init.o
  .debug_aranges
-                0x00000158       0x38 ./gecko_sdk_4.1.0/hardware/driver/configuration_over_swo/src/sl_cos.o
+                0x00000168       0x38 ./gecko_sdk_4.1.0/hardware/driver/configuration_over_swo/src/sl_cos.o
  .debug_aranges
-                0x00000190       0x30 ./gecko_sdk_4.1.0/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
+                0x000001a0       0x30 ./gecko_sdk_4.1.0/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
  .debug_aranges
-                0x000001c0       0x28 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/startup_efr32mg12p.o
+                0x000001d0       0x28 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/startup_efr32mg12p.o
  .debug_aranges
-                0x000001e8       0x68 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
+                0x000001f8       0x68 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
  .debug_aranges
-                0x00000250       0x20 ./gecko_sdk_4.1.0/platform/common/src/sl_assert.o
+                0x00000260       0x20 ./gecko_sdk_4.1.0/platform/common/src/sl_assert.o
  .debug_aranges
-                0x00000270       0x30 ./gecko_sdk_4.1.0/platform/common/toolchain/src/sl_memory.o
+                0x00000280       0x30 ./gecko_sdk_4.1.0/platform/common/toolchain/src/sl_memory.o
  .debug_aranges
-                0x000002a0       0x48 ./gecko_sdk_4.1.0/platform/driver/debug/src/sl_debug_swo.o
+                0x000002b0       0x48 ./gecko_sdk_4.1.0/platform/driver/debug/src/sl_debug_swo.o
  .debug_aranges
-                0x000002e8      0x168 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                0x000002f8      0x168 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
  .debug_aranges
-                0x00000450       0xe8 ./gecko_sdk_4.1.0/platform/emlib/src/em_core.o
+                0x00000460       0xe8 ./gecko_sdk_4.1.0/platform/emlib/src/em_core.o
  .debug_aranges
-                0x00000538      0x158 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
+                0x00000548      0x158 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
  .debug_aranges
-                0x00000690       0x70 ./gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o
+                0x000006a0       0x70 ./gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o
  .debug_aranges
-                0x00000700       0xb8 ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
+                0x00000710       0xb8 ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
  .debug_aranges
-                0x000007b8       0x20 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_dcdc_s1.o
+                0x000007c8       0x20 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_dcdc_s1.o
  .debug_aranges
-                0x000007d8       0x20 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_emu_s1.o
+                0x000007e8       0x20 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_emu_s1.o
  .debug_aranges
-                0x000007f8       0x20 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_hfxo_s1.o
+                0x00000808       0x20 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_hfxo_s1.o
  .debug_aranges
-                0x00000818       0x20 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_lfxo_s1.o
+                0x00000828       0x20 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_lfxo_s1.o
  .debug_aranges
-                0x00000838       0x20 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_nvic.o
+                0x00000848       0x20 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_nvic.o
  .debug_aranges
-                0x00000858       0x20 ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_init.o
+                0x00000868       0x20 ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_init.o
  .debug_aranges
-                0x00000878       0x20 ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_process_action.o
+                0x00000888       0x20 ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_process_action.o
  .debug_aranges
-                0x00000898       0x20 ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay.o
+                0x000008a8       0x20 ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay.o
  .debug_aranges
-                0x000008b8       0x20 ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay_armv6m_gcc.o
+                0x000008c8       0x20 ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay_armv6m_gcc.o
 
-.debug_ranges   0x00000000      0xea8
- .debug_ranges  0x00000000       0x18 ./app.o
- .debug_ranges  0x00000018       0x10 ./main.o
- .debug_ranges  0x00000028       0x10 ./autogen/sl_board_default_init.o
- .debug_ranges  0x00000038       0x10 ./autogen/sl_device_init_clocks.o
- .debug_ranges  0x00000048       0x40 ./autogen/sl_event_handler.o
- .debug_ranges  0x00000088       0x60 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_control_gpio.o
- .debug_ranges  0x000000e8       0x18 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_init.o
- .debug_ranges  0x00000100       0x40 ./gecko_sdk_4.1.0/hardware/driver/configuration_over_swo/src/sl_cos.o
- .debug_ranges  0x00000140       0x50 ./gecko_sdk_4.1.0/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
- .debug_ranges  0x00000190       0x80 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/startup_efr32mg12p.o
- .debug_ranges  0x00000210       0x58 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
- .debug_ranges  0x00000268       0x10 ./gecko_sdk_4.1.0/platform/common/src/sl_assert.o
- .debug_ranges  0x00000278       0x20 ./gecko_sdk_4.1.0/platform/common/toolchain/src/sl_memory.o
- .debug_ranges  0x00000298       0x38 ./gecko_sdk_4.1.0/platform/driver/debug/src/sl_debug_swo.o
- .debug_ranges  0x000002d0      0x430 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
- .debug_ranges  0x00000700      0x1a0 ./gecko_sdk_4.1.0/platform/emlib/src/em_core.o
- .debug_ranges  0x000008a0      0x3c8 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
- .debug_ranges  0x00000c68       0xd0 ./gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o
- .debug_ranges  0x00000d38       0xa8 ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
- .debug_ranges  0x00000de0       0x10 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_dcdc_s1.o
- .debug_ranges  0x00000df0       0x10 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_emu_s1.o
- .debug_ranges  0x00000e00       0x10 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_hfxo_s1.o
- .debug_ranges  0x00000e10       0x10 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_lfxo_s1.o
- .debug_ranges  0x00000e20       0x58 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_nvic.o
- .debug_ranges  0x00000e78       0x10 ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_init.o
- .debug_ranges  0x00000e88       0x10 ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_process_action.o
- .debug_ranges  0x00000e98       0x10 ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay.o
+.debug_ranges   0x00000000      0xeb8
+ .debug_ranges  0x00000000       0x28 ./app.o
+ .debug_ranges  0x00000028       0x10 ./main.o
+ .debug_ranges  0x00000038       0x10 ./autogen/sl_board_default_init.o
+ .debug_ranges  0x00000048       0x10 ./autogen/sl_device_init_clocks.o
+ .debug_ranges  0x00000058       0x40 ./autogen/sl_event_handler.o
+ .debug_ranges  0x00000098       0x60 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_control_gpio.o
+ .debug_ranges  0x000000f8       0x18 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_init.o
+ .debug_ranges  0x00000110       0x40 ./gecko_sdk_4.1.0/hardware/driver/configuration_over_swo/src/sl_cos.o
+ .debug_ranges  0x00000150       0x50 ./gecko_sdk_4.1.0/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
+ .debug_ranges  0x000001a0       0x80 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/startup_efr32mg12p.o
+ .debug_ranges  0x00000220       0x58 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
+ .debug_ranges  0x00000278       0x10 ./gecko_sdk_4.1.0/platform/common/src/sl_assert.o
+ .debug_ranges  0x00000288       0x20 ./gecko_sdk_4.1.0/platform/common/toolchain/src/sl_memory.o
+ .debug_ranges  0x000002a8       0x38 ./gecko_sdk_4.1.0/platform/driver/debug/src/sl_debug_swo.o
+ .debug_ranges  0x000002e0      0x430 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+ .debug_ranges  0x00000710      0x1a0 ./gecko_sdk_4.1.0/platform/emlib/src/em_core.o
+ .debug_ranges  0x000008b0      0x3c8 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
+ .debug_ranges  0x00000c78       0xd0 ./gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o
+ .debug_ranges  0x00000d48       0xa8 ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
+ .debug_ranges  0x00000df0       0x10 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_dcdc_s1.o
+ .debug_ranges  0x00000e00       0x10 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_emu_s1.o
+ .debug_ranges  0x00000e10       0x10 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_hfxo_s1.o
+ .debug_ranges  0x00000e20       0x10 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_lfxo_s1.o
+ .debug_ranges  0x00000e30       0x58 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_nvic.o
+ .debug_ranges  0x00000e88       0x10 ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_init.o
+ .debug_ranges  0x00000e98       0x10 ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_process_action.o
+ .debug_ranges  0x00000ea8       0x10 ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay.o
 
-.debug_macro    0x00000000    0x35dd3
- .debug_macro   0x00000000      0x30f ./app.o
- .debug_macro   0x0000030f      0xa84 ./app.o
- .debug_macro   0x00000d93       0x10 ./app.o
- .debug_macro   0x00000da3      0x4d2 ./app.o
- .debug_macro   0x00001275       0x22 ./app.o
- .debug_macro   0x00001297       0x56 ./app.o
- .debug_macro   0x000012ed       0x51 ./app.o
- .debug_macro   0x0000133e      0x103 ./app.o
- .debug_macro   0x00001441       0x6a ./app.o
- .debug_macro   0x000014ab      0x1df ./app.o
- .debug_macro   0x0000168a       0x1c ./app.o
- .debug_macro   0x000016a6       0x22 ./app.o
- .debug_macro   0x000016c8       0xfb ./app.o
- .debug_macro   0x000017c3     0x1011 ./app.o
- .debug_macro   0x000027d4      0x11f ./app.o
- .debug_macro   0x000028f3      0xe1c ./app.o
- .debug_macro   0x0000370f     0x2275 ./app.o
- .debug_macro   0x00005984      0x329 ./app.o
- .debug_macro   0x00005cad     0x3119 ./app.o
- .debug_macro   0x00008dc6     0x1bba ./app.o
- .debug_macro   0x0000a980     0x2674 ./app.o
- .debug_macro   0x0000cff4     0x1b19 ./app.o
- .debug_macro   0x0000eb0d      0xe2b ./app.o
- .debug_macro   0x0000f938      0x344 ./app.o
- .debug_macro   0x0000fc7c      0x29d ./app.o
- .debug_macro   0x0000ff19     0x2763 ./app.o
- .debug_macro   0x0001267c     0x31cc ./app.o
- .debug_macro   0x00015848     0x136b ./app.o
- .debug_macro   0x00016bb3      0xde2 ./app.o
- .debug_macro   0x00017995      0x249 ./app.o
- .debug_macro   0x00017bde     0x1042 ./app.o
- .debug_macro   0x00018c20     0x1605 ./app.o
- .debug_macro   0x0001a225     0x3cb7 ./app.o
- .debug_macro   0x0001dedc     0x23fc ./app.o
- .debug_macro   0x000202d8      0x70c ./app.o
- .debug_macro   0x000209e4     0x26ef ./app.o
- .debug_macro   0x000230d3     0x1700 ./app.o
- .debug_macro   0x000247d3     0x2efb ./app.o
- .debug_macro   0x000276ce      0xfaf ./app.o
- .debug_macro   0x0002867d      0x6c3 ./app.o
- .debug_macro   0x00028d40     0x1021 ./app.o
- .debug_macro   0x00029d61      0x888 ./app.o
- .debug_macro   0x0002a5e9      0x4ff ./app.o
- .debug_macro   0x0002aae8     0x1dee ./app.o
- .debug_macro   0x0002c8d6       0x40 ./app.o
- .debug_macro   0x0002c916      0x2ce ./app.o
- .debug_macro   0x0002cbe4      0x381 ./app.o
- .debug_macro   0x0002cf65      0x190 ./app.o
- .debug_macro   0x0002d0f5     0x27bf ./app.o
- .debug_macro   0x0002f8b4      0x303 ./app.o
- .debug_macro   0x0002fbb7      0x303 ./app.o
- .debug_macro   0x0002feba       0x22 ./app.o
- .debug_macro   0x0002fedc       0x10 ./app.o
- .debug_macro   0x0002feec       0x8d ./app.o
- .debug_macro   0x0002ff79       0x1c ./app.o
- .debug_macro   0x0002ff95       0x10 ./app.o
- .debug_macro   0x0002ffa5       0xf6 ./app.o
- .debug_macro   0x0003009b       0x16 ./app.o
- .debug_macro   0x000300b1       0xe4 ./app.o
- .debug_macro   0x00030195      0x35a ./app.o
- .debug_macro   0x000304ef       0xf1 ./app.o
- .debug_macro   0x000305e0       0x41 ./main.o
- .debug_macro   0x00030621       0x8e ./autogen/sl_board_default_init.o
- .debug_macro   0x000306af      0x72f ./autogen/sl_board_default_init.o
- .debug_macro   0x00030dde      0x301 ./autogen/sl_device_init_clocks.o
- .debug_macro   0x000310df      0x359 ./autogen/sl_event_handler.o
- .debug_macro   0x00031438      0x735 ./autogen/sl_event_handler.o
- .debug_macro   0x00031b6d       0x11 ./autogen/sl_event_handler.o
- .debug_macro   0x00031b7e      0x2f1 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_control_gpio.o
- .debug_macro   0x00031e6f       0x46 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_control_gpio.o
- .debug_macro   0x00031eb5      0x317 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_init.o
- .debug_macro   0x000321cc       0xea ./gecko_sdk_4.1.0/hardware/board/src/sl_board_init.o
- .debug_macro   0x000322b6       0x58 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_init.o
- .debug_macro   0x0003230e      0x1ae ./gecko_sdk_4.1.0/hardware/driver/configuration_over_swo/src/sl_cos.o
- .debug_macro   0x000324bc      0x16d ./gecko_sdk_4.1.0/hardware/driver/configuration_over_swo/src/sl_cos.o
- .debug_macro   0x00032629      0x32a ./gecko_sdk_4.1.0/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
- .debug_macro   0x00032953      0x276 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/startup_efr32mg12p.o
- .debug_macro   0x00032bc9      0x28b ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
- .debug_macro   0x00032e54       0x2c ./gecko_sdk_4.1.0/platform/common/src/sl_assert.o
- .debug_macro   0x00032e80       0x92 ./gecko_sdk_4.1.0/platform/common/toolchain/src/sl_memory.o
- .debug_macro   0x00032f12       0x16 ./gecko_sdk_4.1.0/platform/common/toolchain/src/sl_memory.o
- .debug_macro   0x00032f28      0x30f ./gecko_sdk_4.1.0/platform/driver/debug/src/sl_debug_swo.o
- .debug_macro   0x00033237       0x3a ./gecko_sdk_4.1.0/platform/driver/debug/src/sl_debug_swo.o
- .debug_macro   0x00033271      0x419 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
- .debug_macro   0x0003368a       0x64 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
- .debug_macro   0x000336ee      0x35d ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
- .debug_macro   0x00033a4b       0x7c ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
- .debug_macro   0x00033ac7       0x17 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
- .debug_macro   0x00033ade       0xee ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
- .debug_macro   0x00033bcc       0x93 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
- .debug_macro   0x00033c5f       0x34 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
- .debug_macro   0x00033c93       0x34 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
- .debug_macro   0x00033cc7      0x2bb ./gecko_sdk_4.1.0/platform/emlib/src/em_core.o
- .debug_macro   0x00033f82      0x40c ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
- .debug_macro   0x0003438e       0x5e ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
- .debug_macro   0x000343ec       0x5c ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
- .debug_macro   0x00034448       0x8d ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
- .debug_macro   0x000344d5      0x2db ./gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o
- .debug_macro   0x000347b0      0x325 ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
- .debug_macro   0x00034ad5       0xeb ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
- .debug_macro   0x00034bc0      0x2e8 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_dcdc_s1.o
- .debug_macro   0x00034ea8       0x22 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_dcdc_s1.o
- .debug_macro   0x00034eca      0x2ee ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_emu_s1.o
- .debug_macro   0x000351b8       0x28 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_emu_s1.o
- .debug_macro   0x000351e0      0x316 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_hfxo_s1.o
- .debug_macro   0x000354f6       0x28 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_hfxo_s1.o
- .debug_macro   0x0003551e      0x30a ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_lfxo_s1.o
- .debug_macro   0x00035828       0x22 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_lfxo_s1.o
- .debug_macro   0x0003584a      0x2b8 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_nvic.o
- .debug_macro   0x00035b02       0x24 ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_init.o
- .debug_macro   0x00035b26       0x24 ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_process_action.o
- .debug_macro   0x00035b4a      0x289 ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay.o
+.debug_macro    0x00000000    0x35df2
+ .debug_macro   0x00000000      0x31e ./app.o
+ .debug_macro   0x0000031e      0xa84 ./app.o
+ .debug_macro   0x00000da2       0x10 ./app.o
+ .debug_macro   0x00000db2      0x4d2 ./app.o
+ .debug_macro   0x00001284       0x22 ./app.o
+ .debug_macro   0x000012a6       0x56 ./app.o
+ .debug_macro   0x000012fc       0x51 ./app.o
+ .debug_macro   0x0000134d      0x103 ./app.o
+ .debug_macro   0x00001450       0x6a ./app.o
+ .debug_macro   0x000014ba      0x1df ./app.o
+ .debug_macro   0x00001699       0x1c ./app.o
+ .debug_macro   0x000016b5       0x22 ./app.o
+ .debug_macro   0x000016d7       0xfb ./app.o
+ .debug_macro   0x000017d2     0x1011 ./app.o
+ .debug_macro   0x000027e3      0x11f ./app.o
+ .debug_macro   0x00002902      0xe1c ./app.o
+ .debug_macro   0x0000371e     0x2275 ./app.o
+ .debug_macro   0x00005993      0x329 ./app.o
+ .debug_macro   0x00005cbc     0x3119 ./app.o
+ .debug_macro   0x00008dd5     0x1bba ./app.o
+ .debug_macro   0x0000a98f     0x2674 ./app.o
+ .debug_macro   0x0000d003     0x1b19 ./app.o
+ .debug_macro   0x0000eb1c      0xe2b ./app.o
+ .debug_macro   0x0000f947      0x344 ./app.o
+ .debug_macro   0x0000fc8b      0x29d ./app.o
+ .debug_macro   0x0000ff28     0x2763 ./app.o
+ .debug_macro   0x0001268b     0x31cc ./app.o
+ .debug_macro   0x00015857     0x136b ./app.o
+ .debug_macro   0x00016bc2      0xde2 ./app.o
+ .debug_macro   0x000179a4      0x249 ./app.o
+ .debug_macro   0x00017bed     0x1042 ./app.o
+ .debug_macro   0x00018c2f     0x1605 ./app.o
+ .debug_macro   0x0001a234     0x3cb7 ./app.o
+ .debug_macro   0x0001deeb     0x23fc ./app.o
+ .debug_macro   0x000202e7      0x70c ./app.o
+ .debug_macro   0x000209f3     0x26ef ./app.o
+ .debug_macro   0x000230e2     0x1700 ./app.o
+ .debug_macro   0x000247e2     0x2efb ./app.o
+ .debug_macro   0x000276dd      0xfaf ./app.o
+ .debug_macro   0x0002868c      0x6c3 ./app.o
+ .debug_macro   0x00028d4f     0x1021 ./app.o
+ .debug_macro   0x00029d70      0x888 ./app.o
+ .debug_macro   0x0002a5f8      0x4ff ./app.o
+ .debug_macro   0x0002aaf7     0x1dee ./app.o
+ .debug_macro   0x0002c8e5       0x40 ./app.o
+ .debug_macro   0x0002c925      0x2ce ./app.o
+ .debug_macro   0x0002cbf3      0x381 ./app.o
+ .debug_macro   0x0002cf74      0x190 ./app.o
+ .debug_macro   0x0002d104     0x27bf ./app.o
+ .debug_macro   0x0002f8c3      0x303 ./app.o
+ .debug_macro   0x0002fbc6      0x303 ./app.o
+ .debug_macro   0x0002fec9       0x22 ./app.o
+ .debug_macro   0x0002feeb       0x10 ./app.o
+ .debug_macro   0x0002fefb       0x8d ./app.o
+ .debug_macro   0x0002ff88       0x1c ./app.o
+ .debug_macro   0x0002ffa4       0x10 ./app.o
+ .debug_macro   0x0002ffb4       0xf6 ./app.o
+ .debug_macro   0x000300aa       0x16 ./app.o
+ .debug_macro   0x000300c0       0xe4 ./app.o
+ .debug_macro   0x000301a4      0x35a ./app.o
+ .debug_macro   0x000304fe       0xf1 ./app.o
+ .debug_macro   0x000305ef       0x10 ./app.o
+ .debug_macro   0x000305ff       0x41 ./main.o
+ .debug_macro   0x00030640       0x8e ./autogen/sl_board_default_init.o
+ .debug_macro   0x000306ce      0x72f ./autogen/sl_board_default_init.o
+ .debug_macro   0x00030dfd      0x301 ./autogen/sl_device_init_clocks.o
+ .debug_macro   0x000310fe      0x359 ./autogen/sl_event_handler.o
+ .debug_macro   0x00031457      0x735 ./autogen/sl_event_handler.o
+ .debug_macro   0x00031b8c       0x11 ./autogen/sl_event_handler.o
+ .debug_macro   0x00031b9d      0x2f1 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_control_gpio.o
+ .debug_macro   0x00031e8e       0x46 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_control_gpio.o
+ .debug_macro   0x00031ed4      0x317 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_init.o
+ .debug_macro   0x000321eb       0xea ./gecko_sdk_4.1.0/hardware/board/src/sl_board_init.o
+ .debug_macro   0x000322d5       0x58 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_init.o
+ .debug_macro   0x0003232d      0x1ae ./gecko_sdk_4.1.0/hardware/driver/configuration_over_swo/src/sl_cos.o
+ .debug_macro   0x000324db      0x16d ./gecko_sdk_4.1.0/hardware/driver/configuration_over_swo/src/sl_cos.o
+ .debug_macro   0x00032648      0x32a ./gecko_sdk_4.1.0/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
+ .debug_macro   0x00032972      0x276 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/startup_efr32mg12p.o
+ .debug_macro   0x00032be8      0x28b ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
+ .debug_macro   0x00032e73       0x2c ./gecko_sdk_4.1.0/platform/common/src/sl_assert.o
+ .debug_macro   0x00032e9f       0x92 ./gecko_sdk_4.1.0/platform/common/toolchain/src/sl_memory.o
+ .debug_macro   0x00032f31       0x16 ./gecko_sdk_4.1.0/platform/common/toolchain/src/sl_memory.o
+ .debug_macro   0x00032f47      0x30f ./gecko_sdk_4.1.0/platform/driver/debug/src/sl_debug_swo.o
+ .debug_macro   0x00033256       0x3a ./gecko_sdk_4.1.0/platform/driver/debug/src/sl_debug_swo.o
+ .debug_macro   0x00033290      0x419 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+ .debug_macro   0x000336a9       0x64 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+ .debug_macro   0x0003370d      0x35d ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+ .debug_macro   0x00033a6a       0x7c ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+ .debug_macro   0x00033ae6       0x17 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+ .debug_macro   0x00033afd       0xee ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+ .debug_macro   0x00033beb       0x93 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+ .debug_macro   0x00033c7e       0x34 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+ .debug_macro   0x00033cb2       0x34 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+ .debug_macro   0x00033ce6      0x2bb ./gecko_sdk_4.1.0/platform/emlib/src/em_core.o
+ .debug_macro   0x00033fa1      0x40c ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
+ .debug_macro   0x000343ad       0x5e ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
+ .debug_macro   0x0003440b       0x5c ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
+ .debug_macro   0x00034467       0x8d ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
+ .debug_macro   0x000344f4      0x2db ./gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o
+ .debug_macro   0x000347cf      0x325 ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
+ .debug_macro   0x00034af4       0xeb ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
+ .debug_macro   0x00034bdf      0x2e8 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_dcdc_s1.o
+ .debug_macro   0x00034ec7       0x22 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_dcdc_s1.o
+ .debug_macro   0x00034ee9      0x2ee ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_emu_s1.o
+ .debug_macro   0x000351d7       0x28 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_emu_s1.o
+ .debug_macro   0x000351ff      0x316 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_hfxo_s1.o
+ .debug_macro   0x00035515       0x28 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_hfxo_s1.o
+ .debug_macro   0x0003553d      0x30a ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_lfxo_s1.o
+ .debug_macro   0x00035847       0x22 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_lfxo_s1.o
+ .debug_macro   0x00035869      0x2b8 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_nvic.o
+ .debug_macro   0x00035b21       0x24 ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_init.o
+ .debug_macro   0x00035b45       0x24 ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_process_action.o
+ .debug_macro   0x00035b69      0x289 ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay.o
 
-.debug_line     0x00000000    0x13fc7
- .debug_line    0x00000000      0xb17 ./app.o
- .debug_line    0x00000b17      0x1b2 ./main.o
- .debug_line    0x00000cc9      0x391 ./autogen/sl_board_default_init.o
- .debug_line    0x0000105a      0xa88 ./autogen/sl_device_init_clocks.o
- .debug_line    0x00001ae2      0xd26 ./autogen/sl_event_handler.o
- .debug_line    0x00002808      0xcc0 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_control_gpio.o
- .debug_line    0x000034c8      0xb9b ./gecko_sdk_4.1.0/hardware/board/src/sl_board_init.o
- .debug_line    0x00004063      0x5fb ./gecko_sdk_4.1.0/hardware/driver/configuration_over_swo/src/sl_cos.o
- .debug_line    0x0000465e      0xc7e ./gecko_sdk_4.1.0/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
- .debug_line    0x000052dc      0x93d ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/startup_efr32mg12p.o
- .debug_line    0x00005c19      0xa24 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
- .debug_line    0x0000663d      0x1e2 ./gecko_sdk_4.1.0/platform/common/src/sl_assert.o
- .debug_line    0x0000681f      0x3fb ./gecko_sdk_4.1.0/platform/common/toolchain/src/sl_memory.o
- .debug_line    0x00006c1a      0xd29 ./gecko_sdk_4.1.0/platform/driver/debug/src/sl_debug_swo.o
- .debug_line    0x00007943     0x2af5 ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
- .debug_line    0x0000a438     0x1132 ./gecko_sdk_4.1.0/platform/emlib/src/em_core.o
- .debug_line    0x0000b56a     0x23d6 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
- .debug_line    0x0000d940      0xff4 ./gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o
- .debug_line    0x0000e934     0x132a ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
- .debug_line    0x0000fc5e      0xac3 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_dcdc_s1.o
- .debug_line    0x00010721      0xade ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_emu_s1.o
- .debug_line    0x000111ff      0xb3a ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_hfxo_s1.o
- .debug_line    0x00011d39      0xb01 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_lfxo_s1.o
- .debug_line    0x0001283a      0xa84 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_nvic.o
- .debug_line    0x000132be      0x167 ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_init.o
- .debug_line    0x00013425      0x170 ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_process_action.o
- .debug_line    0x00013595      0x999 ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay.o
- .debug_line    0x00013f2e       0x99 ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay_armv6m_gcc.o
+.debug_line     0x00000000    0x14145
+ .debug_line    0x00000000      0xc01 ./app.o
+ .debug_line    0x00000c01      0x1b6 ./main.o
+ .debug_line    0x00000db7      0x391 ./autogen/sl_board_default_init.o
+ .debug_line    0x00001148      0xa90 ./autogen/sl_device_init_clocks.o
+ .debug_line    0x00001bd8      0xd2e ./autogen/sl_event_handler.o
+ .debug_line    0x00002906      0xcc8 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_control_gpio.o
+ .debug_line    0x000035ce      0xba3 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_init.o
+ .debug_line    0x00004171      0x5ff ./gecko_sdk_4.1.0/hardware/driver/configuration_over_swo/src/sl_cos.o
+ .debug_line    0x00004770      0xc86 ./gecko_sdk_4.1.0/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
+ .debug_line    0x000053f6      0x93d ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/startup_efr32mg12p.o
+ .debug_line    0x00005d33      0xa24 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
+ .debug_line    0x00006757      0x1e2 ./gecko_sdk_4.1.0/platform/common/src/sl_assert.o
+ .debug_line    0x00006939      0x3ff ./gecko_sdk_4.1.0/platform/common/toolchain/src/sl_memory.o
+ .debug_line    0x00006d38      0xd31 ./gecko_sdk_4.1.0/platform/driver/debug/src/sl_debug_swo.o
+ .debug_line    0x00007a69     0x2afd ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+ .debug_line    0x0000a566     0x113a ./gecko_sdk_4.1.0/platform/emlib/src/em_core.o
+ .debug_line    0x0000b6a0     0x23de ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
+ .debug_line    0x0000da7e      0xffc ./gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o
+ .debug_line    0x0000ea7a     0x1332 ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
+ .debug_line    0x0000fdac      0xacb ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_dcdc_s1.o
+ .debug_line    0x00010877      0xae6 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_emu_s1.o
+ .debug_line    0x0001135d      0xb42 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_hfxo_s1.o
+ .debug_line    0x00011e9f      0xb09 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_lfxo_s1.o
+ .debug_line    0x000129a8      0xa8c ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_nvic.o
+ .debug_line    0x00013434      0x16b ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_init.o
+ .debug_line    0x0001359f      0x174 ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_process_action.o
+ .debug_line    0x00013713      0x999 ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay.o
+ .debug_line    0x000140ac       0x99 ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay_armv6m_gcc.o
 
-.debug_str      0x00000000   0x15e30d
- .debug_str     0x00000000   0x152467 ./app.o
-                             0x153386 (size before relaxing)
- .debug_str     0x00152467       0x6c ./main.o
-                               0x2e6d (size before relaxing)
- .debug_str     0x001524d3     0x3cab ./autogen/sl_board_default_init.o
-                               0x7905 (size before relaxing)
- .debug_str     0x0015617e      0x168 ./autogen/sl_device_init_clocks.o
-                             0x156536 (size before relaxing)
- .debug_str     0x001562e6      0x86c ./autogen/sl_event_handler.o
-                             0x155cca (size before relaxing)
- .debug_str     0x00156b52      0x406 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_control_gpio.o
-                             0x1559c7 (size before relaxing)
- .debug_str     0x00156f58      0x283 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_init.o
-                             0x1567de (size before relaxing)
- .debug_str     0x001571db      0xa02 ./gecko_sdk_4.1.0/hardware/driver/configuration_over_swo/src/sl_cos.o
-                               0x84ba (size before relaxing)
- .debug_str     0x00157bdd      0x328 ./gecko_sdk_4.1.0/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
-                             0x1536dc (size before relaxing)
- .debug_str     0x00157f05      0x16f ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/startup_efr32mg12p.o
-                             0x1503e8 (size before relaxing)
- .debug_str     0x00158074      0x282 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
-                             0x1507af (size before relaxing)
- .debug_str     0x001582f6       0x59 ./gecko_sdk_4.1.0/platform/common/src/sl_assert.o
-                               0x2e54 (size before relaxing)
- .debug_str     0x0015834f      0x14b ./gecko_sdk_4.1.0/platform/common/toolchain/src/sl_memory.o
-                               0x4044 (size before relaxing)
- .debug_str     0x0015849a      0x3fc ./gecko_sdk_4.1.0/platform/driver/debug/src/sl_debug_swo.o
-                             0x156baf (size before relaxing)
- .debug_str     0x00158896     0x317e ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
-                             0x156607 (size before relaxing)
- .debug_str     0x0015ba14      0x68c ./gecko_sdk_4.1.0/platform/emlib/src/em_core.o
-                             0x15163a (size before relaxing)
- .debug_str     0x0015c0a0     0x1313 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
-                             0x156830 (size before relaxing)
- .debug_str     0x0015d3b3      0x210 ./gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o
-                             0x151e3f (size before relaxing)
- .debug_str     0x0015d5c3      0x567 ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
-                             0x153770 (size before relaxing)
- .debug_str     0x0015db2a      0x12e ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_dcdc_s1.o
-                             0x155292 (size before relaxing)
- .debug_str     0x0015dc58      0x1a6 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_emu_s1.o
-                             0x155222 (size before relaxing)
- .debug_str     0x0015ddfe      0x18e ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_hfxo_s1.o
-                             0x15681f (size before relaxing)
- .debug_str     0x0015df8c      0x131 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_lfxo_s1.o
-                             0x156324 (size before relaxing)
- .debug_str     0x0015e0bd       0x74 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_nvic.o
-                             0x154f4e (size before relaxing)
- .debug_str     0x0015e131       0x61 ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_init.o
-                               0x2e25 (size before relaxing)
- .debug_str     0x0015e192       0x6b ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_process_action.o
-                               0x2e52 (size before relaxing)
- .debug_str     0x0015e1fd       0x9b ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay.o
-                             0x150373 (size before relaxing)
- .debug_str     0x0015e298       0x75 ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay_armv6m_gcc.o
-                                 0xc5 (size before relaxing)
+.debug_str      0x00000000   0x15e5d7
+ .debug_str     0x00000000   0x152b87 ./app.o
+                             0x153b03 (size before relaxing)
+ .debug_str     0x00152b87       0x6c ./main.o
+                               0x2e71 (size before relaxing)
+ .debug_str     0x00152bf3     0x3cab ./autogen/sl_board_default_init.o
+                               0x7909 (size before relaxing)
+ .debug_str     0x0015689e       0x5e ./autogen/sl_device_init_clocks.o
+                             0x15653a (size before relaxing)
+ .debug_str     0x001568fc      0x831 ./autogen/sl_event_handler.o
+                             0x155cce (size before relaxing)
+ .debug_str     0x0015712d      0x406 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_control_gpio.o
+                             0x1559cb (size before relaxing)
+ .debug_str     0x00157533      0x283 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_init.o
+                             0x1567e2 (size before relaxing)
+ .debug_str     0x001577b6      0xa02 ./gecko_sdk_4.1.0/hardware/driver/configuration_over_swo/src/sl_cos.o
+                               0x84be (size before relaxing)
+ .debug_str     0x001581b8      0x328 ./gecko_sdk_4.1.0/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
+                             0x1536e0 (size before relaxing)
+ .debug_str     0x001584e0      0x16f ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/startup_efr32mg12p.o
+                             0x1503ec (size before relaxing)
+ .debug_str     0x0015864f      0x282 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
+                             0x1507b3 (size before relaxing)
+ .debug_str     0x001588d1       0x59 ./gecko_sdk_4.1.0/platform/common/src/sl_assert.o
+                               0x2e58 (size before relaxing)
+ .debug_str     0x0015892a      0x14b ./gecko_sdk_4.1.0/platform/common/toolchain/src/sl_memory.o
+                               0x4048 (size before relaxing)
+ .debug_str     0x00158a75      0x3f0 ./gecko_sdk_4.1.0/platform/driver/debug/src/sl_debug_swo.o
+                             0x156bb3 (size before relaxing)
+ .debug_str     0x00158e65     0x317e ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+                             0x15660b (size before relaxing)
+ .debug_str     0x0015bfe3      0x38d ./gecko_sdk_4.1.0/platform/emlib/src/em_core.o
+                             0x15163e (size before relaxing)
+ .debug_str     0x0015c370     0x130d ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
+                             0x156834 (size before relaxing)
+ .debug_str     0x0015d67d      0x210 ./gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o
+                             0x151e43 (size before relaxing)
+ .debug_str     0x0015d88d      0x567 ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
+                             0x153774 (size before relaxing)
+ .debug_str     0x0015ddf4      0x12e ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_dcdc_s1.o
+                             0x155296 (size before relaxing)
+ .debug_str     0x0015df22      0x1a6 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_emu_s1.o
+                             0x155226 (size before relaxing)
+ .debug_str     0x0015e0c8      0x18e ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_hfxo_s1.o
+                             0x156823 (size before relaxing)
+ .debug_str     0x0015e256      0x131 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_lfxo_s1.o
+                             0x156328 (size before relaxing)
+ .debug_str     0x0015e387       0x74 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_nvic.o
+                             0x154f52 (size before relaxing)
+ .debug_str     0x0015e3fb       0x61 ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_init.o
+                               0x2e29 (size before relaxing)
+ .debug_str     0x0015e45c       0x6b ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_process_action.o
+                               0x2e56 (size before relaxing)
+ .debug_str     0x0015e4c7       0x9b ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay.o
+                             0x150377 (size before relaxing)
+ .debug_str     0x0015e562       0x75 ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay_armv6m_gcc.o
+                                 0xc9 (size before relaxing)
 
-.debug_frame    0x00000000     0x1628
- .debug_frame   0x00000000       0x38 ./app.o
- .debug_frame   0x00000038       0x28 ./main.o
- .debug_frame   0x00000060       0x20 ./autogen/sl_board_default_init.o
- .debug_frame   0x00000080       0x28 ./autogen/sl_device_init_clocks.o
- .debug_frame   0x000000a8       0xbc ./autogen/sl_event_handler.o
- .debug_frame   0x00000164      0x110 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_control_gpio.o
- .debug_frame   0x00000274       0x3c ./gecko_sdk_4.1.0/hardware/board/src/sl_board_init.o
- .debug_frame   0x000002b0       0x6c ./gecko_sdk_4.1.0/hardware/driver/configuration_over_swo/src/sl_cos.o
- .debug_frame   0x0000031c       0x54 ./gecko_sdk_4.1.0/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
- .debug_frame   0x00000370       0x38 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/startup_efr32mg12p.o
- .debug_frame   0x000003a8       0xb8 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
- .debug_frame   0x00000460       0x20 ./gecko_sdk_4.1.0/platform/common/src/sl_assert.o
- .debug_frame   0x00000480       0x40 ./gecko_sdk_4.1.0/platform/common/toolchain/src/sl_memory.o
- .debug_frame   0x000004c0       0x9c ./gecko_sdk_4.1.0/platform/driver/debug/src/sl_debug_swo.o
- .debug_frame   0x0000055c      0x49c ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
- .debug_frame   0x000009f8      0x244 ./gecko_sdk_4.1.0/platform/emlib/src/em_core.o
- .debug_frame   0x00000c3c      0x464 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
- .debug_frame   0x000010a0      0x194 ./gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o
- .debug_frame   0x00001234      0x1f0 ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
- .debug_frame   0x00001424       0x30 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_dcdc_s1.o
- .debug_frame   0x00001454       0x2c ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_emu_s1.o
- .debug_frame   0x00001480       0x34 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_hfxo_s1.o
- .debug_frame   0x000014b4       0x28 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_lfxo_s1.o
- .debug_frame   0x000014dc       0x28 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_nvic.o
- .debug_frame   0x00001504       0x2c ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_init.o
- .debug_frame   0x00001530       0x2c ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_process_action.o
- .debug_frame   0x0000155c       0x38 ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay.o
- .debug_frame   0x00001594       0x28 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc_nano.a(lib_a-exit.o)
- .debug_frame   0x000015bc       0x2c c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc_nano.a(lib_a-init.o)
- .debug_frame   0x000015e8       0x20 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc_nano.a(lib_a-memset.o)
- .debug_frame   0x00001608       0x20 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libnosys.a(_exit.o)
+.debug_frame    0x00000000     0x1680
+ .debug_frame   0x00000000       0x90 ./app.o
+ .debug_frame   0x00000090       0x28 ./main.o
+ .debug_frame   0x000000b8       0x20 ./autogen/sl_board_default_init.o
+ .debug_frame   0x000000d8       0x28 ./autogen/sl_device_init_clocks.o
+ .debug_frame   0x00000100       0xbc ./autogen/sl_event_handler.o
+ .debug_frame   0x000001bc      0x110 ./gecko_sdk_4.1.0/hardware/board/src/sl_board_control_gpio.o
+ .debug_frame   0x000002cc       0x3c ./gecko_sdk_4.1.0/hardware/board/src/sl_board_init.o
+ .debug_frame   0x00000308       0x6c ./gecko_sdk_4.1.0/hardware/driver/configuration_over_swo/src/sl_cos.o
+ .debug_frame   0x00000374       0x54 ./gecko_sdk_4.1.0/hardware/driver/mx25_flash_shutdown/src/sl_mx25_flash_shutdown_usart/sl_mx25_flash_shutdown.o
+ .debug_frame   0x000003c8       0x38 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/startup_efr32mg12p.o
+ .debug_frame   0x00000400       0xb8 ./gecko_sdk_4.1.0/platform/Device/SiliconLabs/EFR32MG12P/Source/system_efr32mg12p.o
+ .debug_frame   0x000004b8       0x20 ./gecko_sdk_4.1.0/platform/common/src/sl_assert.o
+ .debug_frame   0x000004d8       0x40 ./gecko_sdk_4.1.0/platform/common/toolchain/src/sl_memory.o
+ .debug_frame   0x00000518       0x9c ./gecko_sdk_4.1.0/platform/driver/debug/src/sl_debug_swo.o
+ .debug_frame   0x000005b4      0x49c ./gecko_sdk_4.1.0/platform/emlib/src/em_cmu.o
+ .debug_frame   0x00000a50      0x244 ./gecko_sdk_4.1.0/platform/emlib/src/em_core.o
+ .debug_frame   0x00000c94      0x464 ./gecko_sdk_4.1.0/platform/emlib/src/em_emu.o
+ .debug_frame   0x000010f8      0x194 ./gecko_sdk_4.1.0/platform/emlib/src/em_gpio.o
+ .debug_frame   0x0000128c      0x1f0 ./gecko_sdk_4.1.0/platform/emlib/src/em_usart.o
+ .debug_frame   0x0000147c       0x30 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_dcdc_s1.o
+ .debug_frame   0x000014ac       0x2c ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_emu_s1.o
+ .debug_frame   0x000014d8       0x34 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_hfxo_s1.o
+ .debug_frame   0x0000150c       0x28 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_lfxo_s1.o
+ .debug_frame   0x00001534       0x28 ./gecko_sdk_4.1.0/platform/service/device_init/src/sl_device_init_nvic.o
+ .debug_frame   0x0000155c       0x2c ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_init.o
+ .debug_frame   0x00001588       0x2c ./gecko_sdk_4.1.0/platform/service/system/src/sl_system_process_action.o
+ .debug_frame   0x000015b4       0x38 ./gecko_sdk_4.1.0/platform/service/udelay/src/sl_udelay.o
+ .debug_frame   0x000015ec       0x28 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc_nano.a(lib_a-exit.o)
+ .debug_frame   0x00001614       0x2c c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc_nano.a(lib_a-init.o)
+ .debug_frame   0x00001640       0x20 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libc_nano.a(lib_a-memset.o)
+ .debug_frame   0x00001660       0x20 c:/siliconlabs/simplicitystudio/v5/developer/toolchains/gnu_arm/10.3_2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp\libnosys.a(_exit.o)

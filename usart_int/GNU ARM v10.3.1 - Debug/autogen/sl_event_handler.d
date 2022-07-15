@@ -63,8 +63,8 @@ autogen/sl_event_handler.o: ../autogen/sl_event_handler.c \
  c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_assert.h \
  c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_bus.h \
  c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_core.h \
- C:\Users\firmware-1\SimplicityStudio\v5_workspace\usart\autogen/sl_component_catalog.h \
- C:\Users\firmware-1\SimplicityStudio\v5_workspace\usart\config/emlib_core_debug_config.h \
+ C:\Users\firmware-1\SimplicityStudio\v5_workspace\usart_int\autogen/sl_component_catalog.h \
+ C:\Users\firmware-1\SimplicityStudio\v5_workspace\usart_int\config/emlib_core_debug_config.h \
  c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_enum.h \
  c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\service\device_init\inc\sl_device_init_nvic.h \
  c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_status.h \
@@ -141,8 +141,8 @@ c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_gpio.h
 c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_assert.h:
 c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_bus.h:
 c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_core.h:
-C:\Users\firmware-1\SimplicityStudio\v5_workspace\usart\autogen/sl_component_catalog.h:
-C:\Users\firmware-1\SimplicityStudio\v5_workspace\usart\config/emlib_core_debug_config.h:
+C:\Users\firmware-1\SimplicityStudio\v5_workspace\usart_int\autogen/sl_component_catalog.h:
+C:\Users\firmware-1\SimplicityStudio\v5_workspace\usart_int\config/emlib_core_debug_config.h:
 c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_enum.h:
 c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\service\device_init\inc\sl_device_init_nvic.h:
 c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_status.h:
