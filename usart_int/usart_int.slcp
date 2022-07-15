@@ -24,6 +24,7 @@ sdk: {id: gecko_sdk, version: 4.1.0}
 toolchain_settings: []
 component:
 - {id: EFR32MG12P433F1024GM48}
+- {id: emlib_letimer}
 - {id: sl_system}
 - {id: device_init}
 - {id: brd4001a}

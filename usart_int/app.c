@@ -1,115 +1,121 @@
-//DECLARACAO DE BIBLIOTECAS
+// DECLARACAO DE BIBLIOTECAS
 #include "em_device.h"
 #include "em_cmu.h"
 #include "em_gpio.h"
-#include "em_usart.h"
-#include "em_LETIMER.h"
+#include "em_USART.h"
 #include "em_chip.h"
+#include "em_emu.h"
+#include "pin_config.h"
 
-#define BUFFER_SIZE 80
-char buffer[BUFFER_SIZE];
+// tamanho do buffer recebido
+#define BUFLEN 80
 
-USART_InitAsync_TypeDef init = USART_INITASYNC_DEFAULT;
-char welcome_string[] = "Olá! Arielli aqui <3\r\f";
-int i,j,z=0;
+// buffer recebido
+uint8_t buffer[BUFLEN];
 
+// posição atual do buffer
+uint32_t inpos = 0;
+uint32_t outpos = 0;
 
+// variável auxiliar p/ o while de recebimento de mensagem
+bool receive = true;
 
-
-#define TOP_VALUE 32000 //frequencia
-
-void LETIMER0_IRQHandler(void)
+// FUNCAO DE CONFIGURAÇÃO DOS PINOS
+void initGpio(void)
 {
-  // Acknowledge the interrupt
-  uint32_t flags = LETIMER_IntGet(LETIMER0);
-  LETIMER_IntClear(LETIMER0, flags);
-  welcome_string[20] = String(z);
-      z++;
+  // habilitando clock
+  CMU_ClockEnable(cmuClock_GPIO, true);
 
-  // transmitindo a mensagem
-    for (i = 0 ; welcome_string[i] != 0; i++)
-    {
-      USART_Tx(USART0, welcome_string[i]);
-    }
+  // definindo o pino de transmissão - PA0
+  GPIO_PinModeSet(USART0_TX_PORT, USART0_TX_PIN, gpioModePushPull, 1);
 
-
+  // definindo o pino de transmissão - PA0
+  GPIO_PinModeSet(USART0_RX_PORT, USART0_RX_PIN, gpioModeInput, 0);
 }
 
-
-
-//Funcao para ininicar o Letiemr
-void initLETIMER(void)
+// FUNCAO PARA CONFIGURACAO DA USART0
+void initUSART0(void)
 {
-  LETIMER_Init_TypeDef LETIMERInit = LETIMER_INIT_DEFAULT;
+  // habilitando clock
+  CMU_ClockEnable(cmuClock_USART0, true);
 
-  // Definindo o clock para as interfaces LE
-  CMU_ClockEnable(cmuClock_HFLE, true);
+  // inicializando modo assíncrono (115.2 Kbps, 8N1, nenhum controle flow)
+  USART_InitAsync_TypeDef init = USART_INITASYNC_DEFAULT;
 
-  // Escolhendo LFXO para o LETIMER
-  CMU_ClockSelectSet(cmuClock_LFA, cmuSelect_LFXO);
-  CMU_ClockEnable(cmuClock_LETIMER0, true);
+  // configura e habilita USART0
+  USART_InitAsync(USART0, &init);
 
-  // Recarregar COMP0 em underflow, pulsar saída e rodar repetidamente
-  LETIMERInit.comp0Top = true;
-  LETIMERInit.ufoa0 = LETIMERUFOAToggle;
-  LETIMERInit.repMode = LETIMERRepeatFree;
-  LETIMERInit.enable = false;
-  LETIMERInit.topValue = TOP_VALUE;
+  // Habilitando fontes USARTs NVIC
+  NVIC_ClearPendingIRQ(USART0_RX_IRQn);
+  NVIC_EnableIRQ(USART0_RX_IRQn);
+  NVIC_ClearPendingIRQ(USART0_TX_IRQn);
+  NVIC_EnableIRQ(USART0_TX_IRQn);
 
-  //O REP0 != 0 para pulsar em underflow
-  LETIMER_RepeatSet(LETIMER0, 0, 1);
-
-  // habilita a saída LETIMER0 no pino PF4 (Rota 28)
-  LETIMER0->ROUTEPEN |=  LETIMER_ROUTEPEN_OUT0PEN;
-  LETIMER0->ROUTELOC0 |= LETIMER_ROUTELOC0_OUT0LOC_LOC28;
-
-  // inicializa LETIMER
-  LETIMER_Init(LETIMER0, &LETIMERInit);
-  LETIMER_Enable(LETIMER0,true);
-
-  // Enable LETIMER0 interrupts for Capture/Compare on channel 0
-   LETIMER_IntEnable(LETIMER0, LETIMER_IEN_CC0);
-   NVIC_EnableIRQ(LETIMER0_IRQn);
+  // Habilitando TX e EX (baseado na localização dos pinos)
+  USART0->ROUTELOC0 = USART0_RX_LOC | USART0_TX_LOC;
+  USART0->ROUTEPEN |= USART_ROUTEPEN_RXPEN | USART_ROUTEPEN_TXPEN;
 }
 
+// FUNCAO PARA RECEBIMENTO DE MENSAGENS
+void USART0_RX_IRQHandler(void)
+{
+  // pega o dado recebido
+  buffer[inpos] = USART0->RXDATA;
+
+  // sai do loop apenas se a mensagem for totalmente mapeada
+  if ((buffer[inpos] != '\r') && (inpos < BUFLEN))
+    inpos++;
+  else
+    receive = false; // fim da recepção
+}
+
+// FUNCAO PARA TRANSMISSAO DE MENSAGENS
+void USART0_TX_IRQHandler(void)
+{
+  // retransmie o dado recebido anteriormente (eco)
+  if (outpos < inpos)
+    USART0->TXDATA = buffer[outpos++];
+  else
+  // precisa desabilitar a interrupçaõ de transmissão, se não ela vai ficar acontecendo
+  //  mesmo quando não há dado recebido para retransmissão
+  {
+    receive = true; // Go back into receive when all is sent
+    USART_IntDisable(USART0, USART_IEN_TXBL);
+  }
+}
 
 void app_init(void)
 {
 
-  // Coonfigurando clock para  GPIO e USART0
-   CMU_ClockEnable(cmuClock_GPIO, true);
-   CMU_ClockEnable(cmuClock_USART0, true);
-
-   //configurando os pinos TX e RX
-   GPIO_PinModeSet(gpioPortA, 1, gpioModeInput, 0);
-   GPIO_PinModeSet(gpioPortA, 0, gpioModePushPull, 1);
-
-   // Iniciando a USART assíncrona nos pinos
-   USART_InitAsync(USART0, &init);
-   USART0->ROUTELOC0 = USART_ROUTELOC0_RXLOC_LOC0 | USART_ROUTELOC0_TXLOC_LOC0;
-   USART0->ROUTEPEN |= USART_ROUTEPEN_TXPEN | USART_ROUTEPEN_RXPEN;
-
+  // inicializações
+  initGpio();
+  initUSART0();
 }
 
 void app_process_action(void)
 {
-  // Lendo a UART
-         for (i = 0; i < BUFFER_SIZE - 1 ; i++ )
-         {
-           buffer[i] = USART_Rx(USART0);
-           if (buffer[i] == '\r')
-           {
-             break; //saindo do loop for caso a mensagem recebida chegue ao fim
-           }
-         }
+  uint32_t i;
+  // Limpa o buffer
+  for (i = 0; i < BUFLEN; i++)
+    buffer[i] = 0;
 
-         // ECO -> retransmitindo a mensagem recebida
-         for (j = 0; j < i ; j ++ )
-         {
-           USART_Tx(USART0, buffer[j]);
-         }
-         USART_Tx(USART0, '\r');
-         USART_Tx(USART0, '\f');
+  // Habilita a interrupção para os dados recebdos pela UART
+  USART_IntEnable(USART0, USART_IEN_RXDATAV);
 
-         initLETIMER();
+  // aguarda até o fim do processo de recebimento
+  while (receive)
+    EMU_EnterEM1();
+
+  // Desabilita a interrupção para os dados recebdos pela UART
+  USART_IntDisable(USART0, USART_IEN_RXDATAV);
+
+  // Habilita a interrupção para transmissão dos dados
+  USART_IntEnable(USART0, USART_IEN_TXBL);
+
+  // aguarda até o fim do processo de transmissão
+  while (!receive)
+    EMU_EnterEM1();
+
+  // reseta os contadores do buffer
+  inpos = outpos = 0;
 }

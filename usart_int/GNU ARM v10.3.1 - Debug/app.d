@@ -67,9 +67,10 @@ app.o: ../app.c \
  c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_enum.h \
  c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_gpio.h \
  c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_usart.h \
- c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_letimer.h \
  c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_chip.h \
- c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_system.h
+ c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_system.h \
+ c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_emu.h \
+ C:\Users\firmware-1\SimplicityStudio\v5_workspace\usart_int\config/pin_config.h
 c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\common\toolchain\inc\sl_gcc_preinclude.h:
 c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\device\siliconlabs\efr32mg12p\include\em_device.h:
 c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\device\siliconlabs\efr32mg12p\include\efr32mg12p433f1024gm48.h:
@@ -138,6 +139,7 @@ c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_gpio.h
 c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\common\inc\sl_enum.h:
 c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_gpio.h:
 c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_usart.h:
-c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_letimer.h:
 c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_chip.h:
 c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_system.h:
+c:\users\firmware-1\simplicitystudio\sdks\gecko_sdk\platform\emlib\inc\em_emu.h:
+C:\Users\firmware-1\SimplicityStudio\v5_workspace\usart_int\config/pin_config.h:

@@ -8,7 +8,7 @@
 #include "pin_config.h"
 
 //função de configuração
-void app_init(void)
+void app_init(voidF)
 {
   //habilitando o clock da GPIO
   CMU_ClockEnable(cmuClock_GPIO, true);

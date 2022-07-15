@@ -103,6 +103,16 @@
 // [TIMER1]$
 
 // $[USART0]
+// USART0 RX on PA1
+#define USART0_RX_PORT                           gpioPortA
+#define USART0_RX_PIN                            1
+#define USART0_RX_LOC                            0
+
+// USART0 TX on PA0
+#define USART0_TX_PORT                           gpioPortA
+#define USART0_TX_PIN                            0
+#define USART0_TX_LOC                            0
+
 // [USART0]$
 
 // $[USART1]
@@ -122,9 +132,6 @@
 
 // $[WTIMER1]
 // [WTIMER1]$
-
-// $[CUSTOM_PIN_NAME]
-// [CUSTOM_PIN_NAME]$
 
 #endif // PIN_CONFIG_H
 

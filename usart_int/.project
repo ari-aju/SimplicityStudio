@@ -121,6 +121,11 @@
 			<locationURI>STUDIO_SDK_LOC/platform/emlib/inc/em_gpio.h</locationURI>
 		</link>
 		<link>
+			<name>gecko_sdk_4.1.0/platform/emlib/inc/em_letimer.h</name>
+			<type>1</type>
+			<locationURI>STUDIO_SDK_LOC/platform/emlib/inc/em_letimer.h</locationURI>
+		</link>
+		<link>
 			<name>gecko_sdk_4.1.0/platform/emlib/inc/em_msc.h</name>
 			<type>1</type>
 			<locationURI>STUDIO_SDK_LOC/platform/emlib/inc/em_msc.h</locationURI>
@@ -169,6 +174,11 @@
 			<name>gecko_sdk_4.1.0/platform/emlib/src/em_gpio.c</name>
 			<type>1</type>
 			<locationURI>STUDIO_SDK_LOC/platform/emlib/src/em_gpio.c</locationURI>
+		</link>
+		<link>
+			<name>gecko_sdk_4.1.0/platform/emlib/src/em_letimer.c</name>
+			<type>1</type>
+			<locationURI>STUDIO_SDK_LOC/platform/emlib/src/em_letimer.c</locationURI>
 		</link>
 		<link>
 			<name>gecko_sdk_4.1.0/platform/emlib/src/em_msc.c</name>
